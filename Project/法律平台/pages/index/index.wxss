@@ -1,0 +1,124 @@
+.banner {
+  width: 750rpx;
+  height: 240rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.cate {
+  width: 750rpx;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx 0;
+}
+
+.cate image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.cate .img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gd {
+  width: 750rpx;
+  height: 50rpx;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.gd image {
+  width: 10rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 25rpx solid #eee;
+}
+
+.table .img {
+  width: 20%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.table .img image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.table .userInfo {
+  width: 80%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table .userInfo .icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table .userInfo .icon text {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.table .userInfo .icon view {
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+}
+
+.table .userInfo .icon view image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.table .userInfo .icon view text {
+  font-size: 30rpx;
+  color: #a28969;
+  margin-left: 10rpx;
+  font-weight: 500;
+}
+
+.table .userInfo .lawyer {
+  display: flex;
+  align-items: center;
+}
+
+.table .userInfo .lawyer image {
+  width: 26rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.table .userInfo .lawyer text {
+  margin-right: 50rpx;
+  color: #dd8c57;
+}
+
+.table .userInfo .desc {
+  font-size: 26rpx;
+  color: #5f5f5f;
+}

@@ -1,0 +1,60 @@
+.input-box {
+    height: 100rpx;
+    width: 750rpx;
+    background-color: #F00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .ipt {
+        height: 80rpx;
+        width: 500rpx;
+        border-radius: 20rpx;
+        border: 1rpx solid #CCC;
+    }
+
+    .ipt-btn {
+        height: 80rpx;
+        line-height: 80rpx;
+        width: 140rpx;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.ok,
+.doing {
+    width: 750rpx;
+    min-height: 100rpx;
+
+    .tit {
+        width: 750rpx;
+        height: 100rpx;
+        line-height: 100rpx;
+        background-color: aqua;
+        display: flex;
+        padding: 0 40rpx;
+        box-sizing: border-box;
+        justify-content: space-between;
+        font-size: 50rpx;
+    }
+
+    .dolist {
+        height: 100rpx;
+        width: 750rpx;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50rpx;
+        box-sizing: border-box;
+    }
+    .oklist {
+        height: 100rpx;
+        width: 750rpx;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50rpx;
+        box-sizing: border-box;
+    }
+}

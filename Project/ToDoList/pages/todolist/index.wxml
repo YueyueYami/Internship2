@@ -1,0 +1,29 @@
+<!--ToDoList-->
+<view class="input-box">
+    <input bindinput="input" type="text" class="ipt" value="{{inputValue}}" />
+    <button bindtap="addToDo" class="ipt-btn">添加</button>
+</view>
+<!-- 正在进行 -->
+<view class="doing">
+    <view class="tit">
+        <text>正在进行</text>
+        <text>0</text>
+    </view>
+    <view class="dolist" wx:for="{{list}}" wx:key="index" wx:if="{{item.checked==false}}">
+        <checkbox checked="{{item.checked}}" bindtap="editCheck" data-index="{{index}}" checked="{{item.checked}}"></checkbox>
+        <text>{{item.val}}</text>
+        <text bindtap="delToDo" data-index="{{index}}"> X </text>
+    </view>
+</view>
+<!-- 已经完成 -->
+<view class="ok">
+    <view class="tit">
+        <text>已经完成</text>
+        <text>0</text>
+    </view>
+    <view class="oklist" wx:for="{{list}}" wx:key="index" wx:if="{{item.checked==true}}">
+        <checkbox bindtap="editCheck" data-index="{{index}}" checked="{{item.checked}}"></checkbox>
+        <text>{{item.val}}</text>
+        <text bindtap="delToDo" data-index="{{index}}"> X </text>
+    </view>
+</view>
