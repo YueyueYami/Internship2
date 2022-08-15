@@ -1,0 +1,223 @@
+page {
+    background-color: #EEE;
+}
+
+//搜索框
+.search {
+    height: 100rpx;
+    width: 100vw;
+    padding: 20rpx;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #FFF;
+
+    input {
+        width: 90%;
+        height: 100%;
+        border-radius: 50rpx;
+        padding-left: 80rpx;
+        box-sizing: border-box;
+        border: 1px solid #CCC;
+    }
+
+    .iconfont {
+        position: absolute;
+        font-size: 40rpx;
+        width: 40rpx;
+        height: 40rpx;
+    }
+
+    .icon-sousuo {
+        top: 30rpx;
+        right: 120rpx;
+    }
+
+    .icon-danliebiao {
+        top: 30rpx;
+        right: 30rpx;
+    }
+
+    .icon-shuangliebiao {
+        top: 30rpx;
+        right: 30rpx;
+    }
+}
+
+// 排序tabs
+.sortModeTabs {
+    width: 100vw;
+    height: 80rpx;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .tabs {
+        width: 25%;
+        text-align: center;
+    }
+
+    .active {
+        color: red;
+    }
+}
+
+//列表展示
+.goodsbox {
+    //开启滚动
+    width: 100vw;
+
+    .goodsList {
+        width: 100%;
+        height: calc(100vh - 180rpx);
+
+        .danlie {
+            width: 100%;
+            height: 100%;
+            padding: 20rpx;
+            box-sizing: border-box;
+
+            .good {
+                width: 100%;
+                height: 220rpx;
+                background-color: #FFF;
+                margin-bottom: 20rpx;
+                display: flex;
+                border-top-right-radius: 20rpx;
+                border-bottom-right-radius: 20rpx;
+
+                .goodImg {
+                    width: 30%;
+                    height: 100%;
+                }
+
+                .goodInfo {
+                    width: 70%;
+                    height: 100%;
+                    position: relative;
+                    padding-left: 20rpx;
+                    padding-top: 10rpx;
+                    box-sizing: border-box;
+
+                    .goodName {
+                        font-size: 30rpx;
+                        font-weight: 700;
+                        text-overflow: ellipsis; //字体超出用省略号显示 
+                        overflow: hidden; // 超出隐藏
+                        display: -webkit-box; //弹性盒模型
+                        -webkit-box-orient: vertical; //上下排列
+                        -webkit-line-clamp: 2; //最多显示两行
+                    }
+
+                    .goodIntroduce {
+                        font-size: 28rpx;
+                        color: #555;
+                    }
+
+                    .goodPrice {
+                        text:nth-child(1) {
+                            color: red;
+                            font-size: 36rpx;
+                        }
+
+                        text:nth-child(2) {
+                            color: #555;
+                            text-decoration: line-through;
+                            margin-left: 20rpx;
+                            font-size: 28rpx;
+                        }
+                    }
+
+                    .goodSellNum {
+                        font-size: 28rpx;
+                        color: #555;
+                    }
+
+                    .goodBuy {
+                        position: absolute;
+                        right: 20rpx;
+                        bottom: 20rpx;
+                        color: red;
+                        font-size: 60rpx;
+                    }
+                }
+            }
+        }
+
+        .shuanglie {
+            display: flex;
+            padding: 10rpx;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+
+            .good {
+                width: 48%;
+                margin-left: 12rpx;
+                border-radius: 20rpx;
+                height: 550rpx;
+                background-color: #FFF;
+                margin-bottom: 20rpx;
+
+                .goodImg {
+                    height: 330rpx;
+                    width: 100%;
+                    border-top-left-radius: 20rpx;
+                    border-top-right-radius: 20rpx;
+                }
+
+                .goodInfo {
+                    height: 200rpx;
+                    width: 100%;
+                    position: relative;
+                    padding: 0 10rpx;
+                    box-sizing: border-box;
+
+                    .goodName {
+                        font-size: 32rpx;
+                        font-weight: 700;
+                        text-overflow: ellipsis; //字体超出用省略号显示 
+                        overflow: hidden; // 超出隐藏
+                        display: -webkit-box; //弹性盒模型
+                        -webkit-box-orient: vertical; //上下排列
+                        -webkit-line-clamp: 2; //最多显示两行
+                    }
+
+                    .goodIntroduce {
+                        font-size: 30rpx;
+                        color: #555;
+                        text-overflow: ellipsis; //字体超出用省略号显示
+                        overflow: hidden; // 超出隐藏
+                        white-space: nowrap // 不换行
+                    }
+
+                    .goodPrice {
+                        text:nth-child(1) {
+                            color: red;
+                            font-size: 36rpx;
+                        }
+
+                        text:nth-child(2) {
+                            color: #555;
+                            text-decoration: line-through;
+                            margin-left: 20rpx;
+                            font-size: 28rpx;
+                        }
+                    }
+
+                    .goodSellNum {
+                        font-size: 28rpx;
+                        color: #555;
+                    }
+
+                    .goodBuy {
+                        position: absolute;
+                        right: 20rpx;
+                        bottom: 5rpx;
+                        color: red;
+                        font-size: 60rpx;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.search {
+  height: 100rpx;
+  width: 100vw;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  background-color: #EEE;
+  border-radius: 5rpx;
+  padding-left: 80rpx;
+  box-sizing: border-box;
+}
+
+.search .iconfont {
+  position: absolute;
+  font-size: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search .icon-sousuo {
+  top: 30rpx;
+  left: 40rpx;
+}
+
+.search .icon-saoma {
+  top: 30rpx;
+  right: 40rpx;
+}
+
+scroll-view {
+  width: 100%;
+  height: calc(100vh - 100rpx);
+}
+
+scroll-view .search-hstory {
+  width: 100%;
+  height: 100%;
+}
+
+scroll-view .search-hstory .searchRecord {
+  width: 100%;
+  height: 100rpx;
+  color: #666;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #CCC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+scroll-view .search-hstory .searchRecord button {
+  margin: 0;
+  width: 140rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #FFF;
+  background-color: #3939f3;
+}

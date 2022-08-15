@@ -1,0 +1,4 @@
+<!--pages/my/my.wxml-->
+<van-empty class="custom-image" image="http://96.43.108.32:4500/i/2022/08/15/xspcsi.png" description="微信申请获取权限">
+    <button bindtap="login">微信一键登录</button>
+</van-empty>

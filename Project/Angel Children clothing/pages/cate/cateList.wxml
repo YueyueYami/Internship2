@@ -1,0 +1,35 @@
+<!--分类页面-->
+<!-- 搜索框 -->
+<view class="search">
+    <text class="iconfont icon-sousuo"></text>
+    <input type="text" placeholder="请输入搜索关键词" bindinput="value" bindconfirm="search" value="{{value}}" />
+    <text class="iconfont icon-saoma"></text>
+</view>
+<!-- 内容页面 -->
+<view class="cont">
+    <!-- 左侧tab栏 -->
+    <scroll-view scroll-y="true" class="tab">
+        <view class="tabs">
+            <text class="{{defaultCateId==item.id?'active':''}}" bindtap="changeTab" data-id="{{item.id}}" wx:for="{{cateList}}" wx:key="id">{{item.name}}</text>
+        </view>
+    </scroll-view>
+    <!-- 右侧商品栏 -->
+    <scroll-view scroll-y="true" class="goodScroll">
+        <view class="goodBox">
+            <view class="good" wx:for="{{cateGood}}" wx:key="id" bindtap="toGoodInfo" data-id="{{item.id}}">
+                <image src="{{item.pic}}" class="goodImg"></image>
+                <view class="goodInfo">
+                    <view class="goodName">
+                        <text>{{item.name}}</text>
+                        <text>已售{{item.numberSells}}</text>
+                    </view>
+                    <view class="goodPrice">
+                        <text>￥{{item.minPrice}}</text>
+                        <text wx:if="{{item.propertyIds}}" class="iconfont icon-share"></text>
+                        <text wx:else="{{false}}" class=" iconfont icon-gouwuche"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

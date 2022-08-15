@@ -1,0 +1,679 @@
+//全局背景
+page {
+    background-color: #EEE;
+}
+
+// 搜索框部分样式
+.search {
+    width: 100vw;
+    height: 125rpx;
+    display: flex;
+    background-color: #FFF;
+    align-items: flex-end;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+
+    .searchTit {
+        width: 30%;
+        height: 100rpx;
+        line-height: 100rpx;
+        font-size: 44rpx;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .searchIpt {
+        width: 56%;
+        height: 100rpx;
+        display: flex;
+        align-items: center;
+
+        view {
+            width: 80%;
+            height: 70%;
+            line-height: 70rpx;
+            color: #FFF;
+            background-color: #CCC;
+            border-radius: 10rpx;
+            padding-left: 30rpx;
+            box-sizing: border-box;
+            box-shadow: 5rpx 5rpx 5rpx 5rpx #999;
+        }
+    }
+}
+
+//banner图部分样式
+.homeBanner {
+    width: 100vw;
+    height: 350rpx;
+    background-color: #FFF;
+    padding-top: 130rpx;
+    swiper-item {
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+//分类部分
+.catebox {
+    width: 100vw;
+    height: 400rpx;
+    padding: 18rpx;
+    box-sizing: border-box;
+    background-color: #FFF;
+
+    .catelist {
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        border-radius: 15rpx;
+        box-shadow: 0 -3rpx 15rpx 10rpx #CCC;
+        display: flex;
+        flex-wrap: wrap;
+
+        .cate {
+            width: 20%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            .cateimg {
+                width: 100rpx;
+                height: 100rpx;
+
+                image {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+//优惠资讯
+.zixun {
+    width: 100vw;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 10rpx;
+
+    .zxtit {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        view:nth-child(1) {
+            font-size: 40rpx;
+            font-weight: 700;
+        }
+
+        view:nth-child(2) {
+            font-size: 40rpx;
+            color: #F00;
+            font-weight: 700;
+        }
+    }
+
+    .zxbar {
+        width: 70%;
+    }
+}
+
+//直播推荐部分
+.livebox {
+    width: 100vw;
+    height: 420rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #FFF;
+
+    .liveDB {
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        border-radius: 40rpx;
+
+        image {
+            border-radius: 40rpx;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+//秒杀标题
+.miaoshaTit {
+    width: 100vw;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF;
+
+    .miaoshaLine {
+        width: 160rpx;
+        border-top: 1px solid #CCC;
+    }
+
+    .miaoshaIcon {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        image {
+            width: 60rpx;
+            height: 60rpx;
+        }
+    }
+}
+
+// 秒杀商品
+.miaoshabox {
+    width: 100vw;
+    padding: 20rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    box-sizing: border-box;
+    background-color: #FFF;
+
+    // 秒杀商品列表项
+    .miaoshaGoods {
+        width: 100%;
+        height: 250rpx;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10rpx;
+        margin-bottom: 40rpx;
+
+        // 秒杀商品图片
+        .miaoshaGoodImg {
+            width: 35%;
+            height: 100%;
+        }
+
+        // 秒杀商品详情
+        .miaoshaGoodInfo {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            // 秒杀商品名称介绍
+            .miaoshaGoodIntroduce {
+                word-wrap: break-word;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                width: 100%;
+                font-size: 28rpx;
+            }
+
+            //秒杀商品进度
+            .miaoshaJindu {
+                height: 5%;
+                width: 98%;
+                background-color: rgba(255, 0, 0, 0.3);
+                border-radius: 50rpx;
+            }
+
+            //秒杀商品购买
+            .miaoshaGoodBuy {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                .miaoshaGoodPrice {
+                    width: 30%;
+                    font-size: 40rpx;
+                    color: red;
+                }
+
+                .miaoshaGoodOldPrice {
+                    width: 30%;
+                    font-size: 26rpx;
+                    padding-left: 10rpx;
+                    box-sizing: border-box;
+                    color: #666;
+                    text-decoration: line-through;
+                }
+
+                button {
+                    width: 40%;
+                    height: 60rpx;
+                    line-height: 60rpx;
+                    border-radius: 50rpx;
+                    background-color: red;
+                    color: #FFF;
+                    font-size: 26rpx;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+//爆品推荐
+.baopinbox {
+    margin-top: 20rpx;
+    width: 100%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+
+    // 爆品推荐标题
+    .baopinTit {
+        width: 100vw;
+        height: 100rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFF;
+
+        .baopinLine {
+            width: 160rpx;
+            border-top: 1px solid #CCC;
+        }
+
+        .baopinIcon {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            image {
+                width: 60rpx;
+                height: 60rpx;
+            }
+        }
+    }
+
+    // 爆品推荐商品
+    .baopinGoods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10rpx;
+        box-sizing: border-box;
+
+        .baokuanGood {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #CCC;
+            box-sizing: border-box;
+            border-radius: 20rpx;
+
+            .baokuanGoodImg {
+                width: 100%;
+                height: 300rpx;
+                border-top-left-radius: 20rpx;
+                border-top-right-radius: 20rpx;
+            }
+
+            .baokuanGoodName {
+                height: 50rpx;
+                width: 100%;
+                line-height: 50rpx;
+                padding: 0 20rpx;
+                box-sizing: border-box;
+                font-size: 26rpx;
+            }
+
+            .baokuanGoodPrice {
+                height: 50rpx;
+                width: 100%;
+                color: red;
+                font-size: 40rpx;
+                line-height: 50rpx;
+                padding: 0 20rpx;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+//砍价模块
+.kanjiabox {
+    width: 100%;
+    margin-top: 20rpx;
+
+    //砍价标题
+    .kanjiaTit {
+        width: 100vw;
+        height: 100rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFF;
+
+        .kanjiaLine {
+            width: 160rpx;
+            border-top: 1px solid #CCC;
+        }
+
+        .kanjiaIcon {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            image {
+                width: 60rpx;
+                height: 60rpx;
+            }
+        }
+    }
+
+    //砍价商品
+    .kanjiaGoods {
+        background-color: #FFF;
+
+        .kanjiaGoodbox {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 300rpx;
+            padding: 20rpx 0;
+            box-sizing: border-box;
+
+            .kanjiaGoodImg {
+                width: 35%;
+                height: 100%;
+                background-color: red;
+            }
+
+            .kanjiaGoodInfo {
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .kanjiaGoodName {
+                    font-size: 28rpx;
+                    padding-right: 10rpx;
+                    box-sizing: border-box;
+                    font-weight: 700;
+                }
+
+                .kanjiaGoodIntroduce {
+                    font-size: 24rpx;
+                    color: #555;
+                }
+
+                .kanjiaGoodPrice {
+                    text:nth-child(1) {
+                        color: #F00;
+                        font-size: 36rpx;
+                    }
+
+                    text:nth-child(2) {
+                        color: #555;
+                        font-size: 24rpx;
+                        text-decoration: line-through;
+                        margin-left: 30rpx;
+                    }
+                }
+            }
+        }
+
+        //砍价按钮
+        .kanjiaBtn {
+            height: 100rpx;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30rpx;
+            box-sizing: border-box;
+
+            button {
+                width: 220rpx;
+                margin: 0;
+                height: 70%;
+                line-height: 70rpx;
+                background-color: red;
+                color: #FFF;
+                font-size: 30rpx;
+                border-radius: 50rpx;
+            }
+        }
+    }
+
+
+}
+
+//拼团模块
+.pintuanbox {
+    margin-top: 20rpx;
+    width: 100vw;
+    background-color: #FFF;
+
+    //拼团标题
+    .pintuanTit {
+        width: 100vw;
+        height: 100rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFF;
+
+        .pintuanLine {
+            width: 160rpx;
+            border-top: 1px solid #CCC;
+        }
+
+        .pintuanIcon {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            image {
+                width: 60rpx;
+                height: 60rpx;
+            }
+        }
+    }
+
+    //拼团商品
+    .pintuanGoods {
+        width: 100vw;
+
+        .pintuanGoodImg {
+            height: 280rpx;
+            width: 100%;
+            background-color: #F00;
+        }
+
+        .pintuanGoodInfo {
+            width: 100%;
+            height: 180rpx;
+            padding: 10rpx;
+            box-sizing: border-box;
+
+            .pintuanGoodName {
+                width: 100%;
+                height: 50%;
+            }
+
+            .pintuanPandI {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                view:nth-child(1) {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .pintuanGoodIntroduce {
+                        width: 100%;
+                        font-size: 28rpx;
+                        color: #666;
+                        overflow: hidden;
+                    }
+
+                    .pintuanGoodPrice {
+                        text:nth-child(1) {
+                            color: #F00;
+                            font-size: 36rpx;
+                        }
+
+                        text:nth-child(2) {
+                            margin-left: 20rpx;
+                            font-size: 28rpx;
+                            color: #666;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+
+                .pintuanOKBtn {
+                    width: 200rpx;
+                    height: 60rpx;
+                    line-height: 60rpx;
+                    border-radius: 50rpx;
+                    margin: 0;
+                    margin-right: 20rpx;
+                    background-color: #F00;
+                    color: #FFF;
+                    font-size: 32rpx;
+                }
+            }
+        }
+    }
+}
+
+//商品列表模块
+.allGoodbox {
+    background-color: #FFF;
+
+    //商品列表标题
+    .allGoodTit {
+        width: 100vw;
+        height: 100rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFF;
+
+        .allGoodLine {
+            width: 160rpx;
+            border-top: 1px solid #CCC;
+        }
+
+        .allGoodIcon {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            image {
+                width: 60rpx;
+                height: 60rpx;
+            }
+        }
+    }
+
+    //商品列表盒子
+    .allGoodbox {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10rpx;
+        box-sizing: border-box;
+
+        .goodInfo {
+            width: 46%;
+            height: 500rpx;
+            border-radius: 20rpx;
+            margin: 8rpx 20rpx;
+            margin-right: 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .goodImg {
+                width: 100%;
+                height: 320rpx;
+                border-top-left-radius: 20rpx;
+                border-top-right-radius: 20rpx;
+            }
+
+            .goodName {
+                font-size: 28rpx;
+                width: 100%;
+                padding: 0 20rpx;
+                box-sizing: border-box;
+                word-wrap: break-word;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .goodIntroduce {
+                font-size: 26rpx;
+                width: 100%;
+                color: #555;
+                padding: 0 20rpx;
+                box-sizing: border-box;
+                word-wrap: break-word;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+
+            .goodPrice {
+                width: 100%;
+                padding: 0 20rpx;
+                box-sizing: border-box;
+
+                .goodNowPrice {
+                    font-size: 34rpx;
+                    color: #F00;
+                }
+
+                .goodOldPrice {
+                    font-size: 26rpx;
+                    padding: 0 20rpx;
+                    box-sizing: border-box;
+                    text-decoration: line-through;
+                    color: #555;
+                }
+            }
+        }
+    }
+}

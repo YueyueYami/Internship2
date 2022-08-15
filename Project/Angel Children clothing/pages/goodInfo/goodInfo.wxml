@@ -1,0 +1,48 @@
+<!--pages/goodInfo/goodInfo.wxml-->
+<!-- 商品详情tab -->
+<view class="tabs">
+    <view class="active">商品简介</view>
+    <view>商品详情</view>
+    <view>商品评价</view>
+</view>
+<!-- 商品banner -->
+<view class="bannerbox">
+    <swiper class="banner">
+        <swiper-item class="banner-item" wx:for="{{pics}}" wx:key="index">
+            <image mode="widthFix" src="{{item}}" class="goodImg"></image>
+        </swiper-item>
+    </swiper>
+    <text class="iconfont icon-share"></text>
+    <text class="iconfont icon-erweima"></text>
+</view>
+<!-- 商品价格详情 -->
+<view class="goodInfo">
+    <view class="goodPrice">
+        <text>￥{{goodInfo.minPrice}}</text>
+        <text>￥{{goodInfo.originalPrice}}</text>
+    </view>
+    <view class="goodName">
+        <view>{{goodInfo.name}}</view>
+        <view>{{goodInfo.characteristic}}</view>
+    </view>
+    <view class="shareText">分享有赏，好友下单后可得 5元 现金奖励</view>
+</view>
+<!-- 商品富文本详情 -->
+<view class="goodPicInfoTit">
+    <view class="tit">商品详情</view>
+</view>
+<rich-text class="richInfo" nodes="{{content}}"></rich-text>
+<!-- 商品导航组件 -->
+<van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" />
+    <van-goods-action-icon icon="cart-o" text="购物车" info="" />
+    <van-goods-action-icon icon="like-o" text="店铺" />
+    <van-goods-action-button text="加入购物车" type="warning" />
+    <van-goods-action-button bind:click="buyShowTago" text="立即购买" />
+</van-goods-action>
+<!-- 购买商品弹出层 -->
+<van-popup show="{{ buyShow }}" position="bottom" custom-style="height: 20%;" closeable bind:close="onClose">
+    <view class="popup">
+        
+    </view>
+</van-popup>

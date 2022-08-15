@@ -1,0 +1,4 @@
+<!--pages/shopCart/shopCart.wxml-->
+<van-empty class="custom-image" image="http://96.43.108.32:4500/i/2022/08/15/xspcsi.png" description="购物车空空如也">
+    <button class="customBtn">去逛逛</button>
+</van-empty>

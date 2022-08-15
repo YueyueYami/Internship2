@@ -1,0 +1,143 @@
+.search {
+  height: 100rpx;
+  width: 100vw;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  background-color: #EEE;
+  border-radius: 50rpx;
+  padding-left: 80rpx;
+  box-sizing: border-box;
+}
+
+.search .iconfont {
+  position: absolute;
+  font-size: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search .icon-sousuo {
+  top: 30rpx;
+  left: 40rpx;
+}
+
+.search .icon-saoma {
+  top: 30rpx;
+  right: 40rpx;
+}
+
+.cont {
+  width: 100vw;
+  height: calc(100vh - 100rpx);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cont .tab {
+  width: 30%;
+}
+
+.cont .tab .tabs {
+  width: 100%;
+  background-color: #EEE;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont .tab .tabs text {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.cont .tab .tabs .active {
+  border-left: 10rpx solid #F00;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+
+.cont .goodScroll {
+  width: 70%;
+  background-color: #fafafa;
+}
+
+.cont .goodScroll .goodBox {
+  width: 100%;
+  height: 100%;
+}
+
+.cont .goodScroll .goodBox .good {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  margin: 10rpx 0;
+}
+
+.cont .goodScroll .goodBox .good .goodImg {
+  width: 36%;
+  height: 200rpx;
+  border-radius: 30rpx;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo {
+  width: 64%;
+  height: 200rpx;
+  padding: 10rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo .goodName {
+  width: 100%;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo .goodName text:nth-child(1) {
+  font-weight: 700;
+  word-wrap: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo .goodName text:nth-child(2) {
+  font-size: 26rpx;
+  color: #AAA;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo .goodPrice {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  align-items: flex-end;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo .goodPrice text:nth-child(1) {
+  font-size: 36rpx;
+  color: red;
+}
+
+.cont .goodScroll .goodBox .good .goodInfo .goodPrice text:nth-child(2) {
+  font-size: 60rpx;
+  color: red;
+}

@@ -1,0 +1,163 @@
+<!--首页-->
+<view class="search">
+    <view class="searchTit">天使童装</view>
+    <view class="searchIpt">
+        <view bindtap="toSearch">请输入关键词搜索</view>
+    </view>
+</view>
+<!-- 首页banner图 -->
+<swiper class="homeBanner" indicator-dots="true" autoplay="true">
+    <swiper-item wx:for="{{homeBannerList}}" wx:key="id">
+        <image src="{{item.picUrl}}"></image>
+    </swiper-item>
+</swiper>
+<!-- 分类模块 -->
+<view class="catebox">
+    <view class="catelist">
+        <view wx:for="{{homeCateList}}" wx:key="id" class="cate" data-id="{{item.id}}" bindtap="toCate">
+            <view class="cateimg">
+                <image src="{{item.icon}}"></image>
+            </view>
+            <view class="catename">{{item.name}}</view>
+        </view>
+    </view>
+</view>
+<!-- 优惠资讯 -->
+<view class="zixun">
+    <view class="zxtit">
+        <view>优惠</view>
+        <view>资讯</view>
+    </view>
+    <van-notice-bar background="#FFF" class="zxbar" mode="link" text="{{NoticeBar}}" />
+</view>
+<!-- 直播推荐模块 -->
+<view class="livebox">
+    <view class="liveDB">
+        <image src="http://96.43.108.32:4500/i/2022/08/13/112unjn.png"></image>
+    </view>
+</view>
+<!-- 限时秒杀标题模块 -->
+<view class="miaoshaTit">
+    <view class="miaoshaLine"></view>
+    <view class="miaoshaIcon">
+        <image src="../../public/img/miaosha.png"></image>
+        <text>限时秒杀</text>
+    </view>
+    <view class="miaoshaLine"></view>
+</view>
+<!-- 限时秒杀商品模块  -->
+<view class="miaoshabox">
+    <view class="miaoshaGoods" wx:for="{{miaoshaGoods}}" wx:key="id">
+        <image mode="scaleToFill" src="{{item.pic}}" class="miaoshaGoodImg"></image>
+        <view class="miaoshaGoodInfo">
+            <text class="miaoshaGoodIntroduce">{{item.name}}</text>
+            <view class="miaoshaJindu"></view>
+            <view class="miaoshaGoodBuy">
+                <text class="miaoshaGoodPrice">￥{{item.minPrice}}</text>
+                <text class="miaoshaGoodOldPrice">￥{{item.originalPrice}}</text>
+                <button class="miaoshaGoodbtn" bindtap="toGoodInfo" data-id="{{item.id}}">已结束</button>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 爆品推荐模块 -->
+<view class="baopinbox">
+    <!-- 爆品推荐标题 -->
+    <view class="baopinTit">
+        <view class="baopinLine"></view>
+        <view class="baopinIcon">
+            <image src="../../public/img/baokuan.png"></image>
+            <text>爆品推荐</text>
+        </view>
+        <view class="baopinLine"></view>
+    </view>
+    <!-- 爆品推荐商品 -->
+    <view class="baopinGoods">
+        <view class="baokuanGood" wx:for="{{baokuanGoods}}" wx:key="id" bindtap="toGoodInfo" data-id="{{item.id}}">
+            <image class="baokuanGoodImg" src="{{item.pic}}"></image>
+            <text class="baokuanGoodName">{{item.name}}</text>
+            <text class="baokuanGoodPrice">￥{{item.minPrice}}</text>
+        </view>
+    </view>
+</view>
+<!-- 疯狂砍价模块 -->
+<view class="kanjiabox">
+    <!-- 砍价标题 -->
+    <view class="kanjiaTit">
+        <view class="kanjiaLine"></view>
+        <view class="kanjiaIcon">
+            <image src="../../public/img/kanjia.png"></image>
+            <text>疯狂砍价</text>
+        </view>
+        <view class="kanjiaLine"></view>
+    </view>
+    <!-- 砍价商品 -->
+    <view class="kanjiaGoods" wx:for="{{kanjiaGoods}}" wx:key="id">
+        <view class="kanjiaGoodbox">
+            <image class="kanjiaGoodImg" src="{{item.pic}}"></image>
+            <view class="kanjiaGoodInfo">
+                <text class="kanjiaGoodName">{{item.name}}</text>
+                <text class="kanjiaGoodIntroduce">纯色袜子</text>
+                <van-progress percentage="0" pivot-color="#fdeded" text-color="red" />
+                <view class="kanjiaGoodPrice">
+                    <text>￥120</text>
+                    <text>￥120</text>
+                </view>
+            </view>
+        </view>
+        <view class="kanjiaBtn">
+            <button bindtap="toGoodInfo" data-id="{{item.id}}">砍价</button>
+        </view>
+    </view>
+</view>
+<!-- 全民拼团模块 -->
+<view class="pintuanbox">
+    <!-- 拼团标题 -->
+    <view class="pintuanTit">
+        <view class="pintuanLine"></view>
+        <view class="pintuanIcon">
+            <image src="../../public/img/pintuan.png"></image>
+            <text>全民拼团</text>
+        </view>
+        <view class="pintuanLine"></view>
+    </view>
+    <view class="pintuanGoods" wx:for="{{pintuanGoods}}" wx:key="id">
+        <image src="{{item.pic}}" class="pintuanGoodImg"></image>
+        <view class="pintuanGoodInfo">
+            <view class="pintuanGoodName">{{item.name}}</view>
+            <view class="pintuanPandI">
+                <view>
+                    <view class="pintuanGoodIntroduce">{{item.characteristic}}</view>
+                    <view class="pintuanGoodPrice">
+                        <text>￥{{item.pingtuanPrice}}</text>
+                        <text>￥{{item.originalPrice}}</text>
+                    </view>
+                </view>
+                <button class="pintuanOKBtn" bindtap="toGoodInfo" data-id="{{item.id}}">拼团</button>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 商品列表模块 -->
+<view class="allGoodbox">
+    <!-- 商品列表标题 -->
+    <view class="allGoodTit">
+        <view class="allGoodLine"></view>
+        <view class="allGoodIcon">
+            <image src="../../public/img/baokuan.png"></image>
+            <text>爆品推荐</text>
+        </view>
+        <view class="allGoodLine"></view>
+    </view>
+    <view class="allGoodbox">
+        <view class="goodInfo" wx:for="{{allGood}}" wx:key="id" bindtap="toGoodInfo" data-id="{{item.id}}">
+            <image class="goodImg" src="{{item.pic}}"></image>
+            <text class="goodName">{{item.name}}</text>
+            <text class="goodIntroduce">{{item.characteristic}}</text>
+            <view class="goodPrice">
+                <text class="goodNowPrice">￥{{item.minPrice}}</text>
+                <text class="goodOldPrice">￥{{item.originalPrice}}</text>
+            </view>
+        </view>
+    </view>
+</view>

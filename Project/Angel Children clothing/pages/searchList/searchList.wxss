@@ -1,0 +1,215 @@
+page {
+  background-color: #EEE;
+}
+
+.search {
+  height: 100rpx;
+  width: 100vw;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #FFF;
+}
+
+.search input {
+  width: 90%;
+  height: 100%;
+  border-radius: 50rpx;
+  padding-left: 80rpx;
+  box-sizing: border-box;
+  border: 1px solid #CCC;
+}
+
+.search .iconfont {
+  position: absolute;
+  font-size: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search .icon-sousuo {
+  top: 30rpx;
+  right: 120rpx;
+}
+
+.search .icon-danliebiao {
+  top: 30rpx;
+  right: 30rpx;
+}
+
+.search .icon-shuangliebiao {
+  top: 30rpx;
+  right: 30rpx;
+}
+
+.sortModeTabs {
+  width: 100vw;
+  height: 80rpx;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sortModeTabs .tabs {
+  width: 25%;
+  text-align: center;
+}
+
+.sortModeTabs .active {
+  color: red;
+}
+
+.goodsbox {
+  width: 100vw;
+}
+
+.goodsbox .goodsList {
+  width: 100%;
+  height: calc(100vh - 180rpx);
+}
+
+.goodsbox .goodsList .danlie {
+  width: 100%;
+  height: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.goodsbox .goodsList .danlie .good {
+  width: 100%;
+  height: 220rpx;
+  background-color: #FFF;
+  margin-bottom: 20rpx;
+  display: flex;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.goodsbox .goodsList .danlie .good .goodImg {
+  width: 30%;
+  height: 100%;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo .goodName {
+  font-size: 30rpx;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo .goodIntroduce {
+  font-size: 28rpx;
+  color: #555;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo .goodPrice text:nth-child(1) {
+  color: red;
+  font-size: 36rpx;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo .goodPrice text:nth-child(2) {
+  color: #555;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo .goodSellNum {
+  font-size: 28rpx;
+  color: #555;
+}
+
+.goodsbox .goodsList .danlie .good .goodInfo .goodBuy {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  color: red;
+  font-size: 60rpx;
+}
+
+.goodsbox .goodsList .shuanglie {
+  display: flex;
+  padding: 10rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.goodsbox .goodsList .shuanglie .good {
+  width: 48%;
+  margin-left: 12rpx;
+  border-radius: 20rpx;
+  height: 550rpx;
+  background-color: #FFF;
+  margin-bottom: 20rpx;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodImg {
+  height: 330rpx;
+  width: 100%;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo {
+  height: 200rpx;
+  width: 100%;
+  position: relative;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo .goodName {
+  font-size: 32rpx;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo .goodIntroduce {
+  font-size: 30rpx;
+  color: #555;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo .goodPrice text:nth-child(1) {
+  color: red;
+  font-size: 36rpx;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo .goodPrice text:nth-child(2) {
+  color: #555;
+  text-decoration: line-through;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo .goodSellNum {
+  font-size: 28rpx;
+  color: #555;
+}
+
+.goodsbox .goodsList .shuanglie .good .goodInfo .goodBuy {
+  position: absolute;
+  right: 20rpx;
+  bottom: 5rpx;
+  color: red;
+  font-size: 60rpx;
+}

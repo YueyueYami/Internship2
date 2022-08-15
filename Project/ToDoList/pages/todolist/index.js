@@ -6,7 +6,9 @@ Page({
      */
     data: {
         inputValue: '',
-        list: []
+        list: [],
+        donum: 0,
+        oknum: 0
     },
     input(e) {
         this.data.inputValue = e.detail.value
@@ -24,6 +26,7 @@ Page({
             list: this.data.list,
             inputValue: ''
         })
+        this.render()
     },
     //修改状态
     editCheck(e) {
@@ -33,6 +36,7 @@ Page({
         this.setData({
             list: this.data.list
         })
+        this.render()
     },
     //删除todo
     delToDo(e) {
@@ -40,6 +44,16 @@ Page({
         this.data.list.splice(index, 1)
         this.setData({
             list: this.data.list
+        })
+        this.render()
+    },
+    render() {
+        this.data.donum = this.data.list.filter(item => item.checked == false).length
+        this.data.oknum = this.data.list.filter(item => item.checked == true).length
+        console.log(this.data.donum);
+        this.setData({
+            donum: this.data.donum,
+            oknum: this.data.oknum
         })
     },
     /**

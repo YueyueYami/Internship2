@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'iconfont';  /* Project id 3424689 */
+    src: url('//at.alicdn.com/t/c/font_3424689_u6j7mrm1xfs.woff2?t=1660483402804') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3424689_u6j7mrm1xfs.woff?t=1660483402804') format('woff'),
+         url('//at.alicdn.com/t/c/font_3424689_u6j7mrm1xfs.ttf?t=1660483402804') format('truetype');
+  }
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+    content: "\e600";
+}
+
+.icon-saoma:before {
+    content: "\e749";
+}
+
+.icon-gouwuche:before {
+    content: "\e70b";
+}

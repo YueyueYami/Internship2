@@ -1,0 +1,10 @@
+<!--首屏加载页面-->
+<swiper class="banner" indicator-dots="true" bindchange="switchBanner">
+    <swiper-item wx:for="{{appBannerList}}" wx:key="id">
+        <image src="{{item.picUrl}}"></image>
+    </swiper-item>
+</swiper>
+<!-- 进入首页的按钮 -->
+<view class="btn" hidden="{{btnShow}}">
+    <button bindtap="toHome">进入首页</button>
+</view>

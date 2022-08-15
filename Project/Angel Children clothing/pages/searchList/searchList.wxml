@@ -1,0 +1,34 @@
+<!--pages/searchList/searchList.wxml-->
+<!-- 搜索框 -->
+<view class="search">
+    <text class="iconfont icon-sousuo"></text>
+    <input type="text" placeholder="请输入搜索关键词" />
+    <text bindtap="switchListMode" class="iconfont {{goodListMode==true?'icon-danliebiao':'icon-shuangliebiao'}}"></text>
+</view>
+<!-- 排序方式tabs -->
+<view class="sortModeTabs">
+    <view class="tabs {{tabNum==0?'active':''}}" bindtap="zonghe">综合</view>
+    <view class="tabs {{tabNum==1?'active':''}}" bindtap="xinpin">新品</view>
+    <view class="tabs {{tabNum==2?'active':''}}" bindtap="xiaoliang">销量</view>
+    <view class="tabs {{tabNum==3?'active':''}}" bindtap="jiage">价格</view>
+</view>
+<!-- 商品展示 -->
+<scroll-view scroll-y="true" class="goodsbox">
+    <view class="goodsList">
+        <view class="{{goodListMode==true?'danlie':'shuanglie'}}">
+            <view class="good" wx:for="{{searchGoods}}" wx:key="id">
+                <image src="{{item.pic}}" class="goodImg"></image>
+                <view class="goodInfo">
+                    <view class="goodName">{{item.name}}</view>
+                    <view class="goodIntroduce">{{item.characteristic}}</view>
+                    <view class="goodPrice">
+                        <text>￥{{item.minPrice}}</text>
+                        <text>￥{{item.originalPrice}}</text>
+                    </view>
+                    <view class="goodSellNum">已出售{{item.numberOrders}}件</view>
+                    <view class="goodBuy iconfont icon-gouwuche"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

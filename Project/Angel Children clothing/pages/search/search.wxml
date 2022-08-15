@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="search">
+    <text class="iconfont icon-sousuo"></text>
+    <input type="text" placeholder="请输入搜索关键词" bindinput="value" bindconfirm="search" value="{{value}}" />
+    <text class="iconfont icon-saoma"></text>
+</view>
+<!-- 搜索历史记录 -->
+<scroll-view scroll-y="true">
+    <view class="search-hstory">
+        <view class="searchRecord">历史搜索</view>
+        <view catchtap="toSearch" data-value="{{item.text}}" class="searchRecord" wx:for="{{searchRecord}}" wx:key="index">
+            <text>{{item.text}}</text>
+            <button catchtap="delRecord" data-index="{{index}}">删除×</button>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,644 @@
+page {
+  background-color: #EEE;
+}
+
+.search {
+  width: 100vw;
+  height: 125rpx;
+  display: flex;
+  background-color: #FFF;
+  align-items: flex-end;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.search .searchTit {
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 44rpx;
+  text-align: center;
+  font-weight: 600;
+}
+
+.search .searchIpt {
+  width: 56%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search .searchIpt view {
+  width: 80%;
+  height: 70%;
+  line-height: 70rpx;
+  color: #FFF;
+  background-color: #CCC;
+  border-radius: 10rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #999;
+}
+
+.homeBanner {
+  width: 100vw;
+  height: 350rpx;
+  background-color: #FFF;
+  padding-top: 130rpx;
+}
+
+.homeBanner swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.catebox {
+  width: 100vw;
+  height: 400rpx;
+  padding: 18rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+
+.catebox .catelist {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  border-radius: 15rpx;
+  box-shadow: 0 -3rpx 15rpx 10rpx #CCC;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catebox .catelist .cate {
+  width: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.catebox .catelist .cate .cateimg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.catebox .catelist .cate .cateimg image {
+  width: 100%;
+  height: 100%;
+}
+
+.zixun {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 10rpx;
+}
+
+.zixun .zxtit {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zixun .zxtit view:nth-child(1) {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.zixun .zxtit view:nth-child(2) {
+  font-size: 40rpx;
+  color: #F00;
+  font-weight: 700;
+}
+
+.zixun .zxbar {
+  width: 70%;
+}
+
+.livebox {
+  width: 100vw;
+  height: 420rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+
+.livebox .liveDB {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  border-radius: 40rpx;
+}
+
+.livebox .liveDB image {
+  border-radius: 40rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.miaoshaTit {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.miaoshaTit .miaoshaLine {
+  width: 160rpx;
+  border-top: 1px solid #CCC;
+}
+
+.miaoshaTit .miaoshaIcon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.miaoshaTit .miaoshaIcon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.miaoshabox {
+  width: 100vw;
+  padding: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+
+.miaoshabox .miaoshaGoods {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodImg {
+  width: 35%;
+  height: 100%;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo .miaoshaGoodIntroduce {
+  word-wrap: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  font-size: 28rpx;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo .miaoshaJindu {
+  height: 5%;
+  width: 98%;
+  background-color: rgba(255, 0, 0, 0.3);
+  border-radius: 50rpx;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo .miaoshaGoodBuy {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo .miaoshaGoodBuy .miaoshaGoodPrice {
+  width: 30%;
+  font-size: 40rpx;
+  color: red;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo .miaoshaGoodBuy .miaoshaGoodOldPrice {
+  width: 30%;
+  font-size: 26rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.miaoshabox .miaoshaGoods .miaoshaGoodInfo .miaoshaGoodBuy button {
+  width: 40%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+  background-color: red;
+  color: #FFF;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+
+.baopinbox {
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.baopinbox .baopinTit {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.baopinbox .baopinTit .baopinLine {
+  width: 160rpx;
+  border-top: 1px solid #CCC;
+}
+
+.baopinbox .baopinTit .baopinIcon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.baopinbox .baopinTit .baopinIcon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.baopinbox .baopinGoods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.baopinbox .baopinGoods .baokuanGood {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #CCC;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+}
+
+.baopinbox .baopinGoods .baokuanGood .baokuanGoodImg {
+  width: 100%;
+  height: 300rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.baopinbox .baopinGoods .baokuanGood .baokuanGoodName {
+  height: 50rpx;
+  width: 100%;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+
+.baopinbox .baopinGoods .baokuanGood .baokuanGoodPrice {
+  height: 50rpx;
+  width: 100%;
+  color: red;
+  font-size: 40rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.kanjiabox {
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.kanjiabox .kanjiaTit {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.kanjiabox .kanjiaTit .kanjiaLine {
+  width: 160rpx;
+  border-top: 1px solid #CCC;
+}
+
+.kanjiabox .kanjiaTit .kanjiaIcon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kanjiabox .kanjiaTit .kanjiaIcon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.kanjiabox .kanjiaGoods {
+  background-color: #FFF;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 300rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodImg {
+  width: 35%;
+  height: 100%;
+  background-color: red;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodInfo {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodInfo .kanjiaGoodName {
+  font-size: 28rpx;
+  padding-right: 10rpx;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodInfo .kanjiaGoodIntroduce {
+  font-size: 24rpx;
+  color: #555;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodInfo .kanjiaGoodPrice text:nth-child(1) {
+  color: #F00;
+  font-size: 36rpx;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodInfo .kanjiaGoodPrice text:nth-child(2) {
+  color: #555;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 30rpx;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaBtn {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+
+.kanjiabox .kanjiaGoods .kanjiaBtn button {
+  width: 220rpx;
+  margin: 0;
+  height: 70%;
+  line-height: 70rpx;
+  background-color: red;
+  color: #FFF;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+}
+
+.pintuanbox {
+  margin-top: 20rpx;
+  width: 100vw;
+  background-color: #FFF;
+}
+
+.pintuanbox .pintuanTit {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.pintuanbox .pintuanTit .pintuanLine {
+  width: 160rpx;
+  border-top: 1px solid #CCC;
+}
+
+.pintuanbox .pintuanTit .pintuanIcon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pintuanbox .pintuanTit .pintuanIcon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.pintuanbox .pintuanGoods {
+  width: 100vw;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodImg {
+  height: 280rpx;
+  width: 100%;
+  background-color: #F00;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo {
+  width: 100%;
+  height: 180rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanGoodName {
+  width: 100%;
+  height: 50%;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanPandI {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanPandI view:nth-child(1) {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanPandI view:nth-child(1) .pintuanGoodIntroduce {
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+  overflow: hidden;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanPandI view:nth-child(1) .pintuanGoodPrice text:nth-child(1) {
+  color: #F00;
+  font-size: 36rpx;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanPandI view:nth-child(1) .pintuanGoodPrice text:nth-child(2) {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.pintuanbox .pintuanGoods .pintuanGoodInfo .pintuanPandI .pintuanOKBtn {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+  margin: 0;
+  margin-right: 20rpx;
+  background-color: #F00;
+  color: #FFF;
+  font-size: 32rpx;
+}
+
+.allGoodbox {
+  background-color: #FFF;
+}
+
+.allGoodbox .allGoodTit {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.allGoodbox .allGoodTit .allGoodLine {
+  width: 160rpx;
+  border-top: 1px solid #CCC;
+}
+
+.allGoodbox .allGoodTit .allGoodIcon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.allGoodbox .allGoodTit .allGoodIcon image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.allGoodbox .allGoodbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.allGoodbox .allGoodbox .goodInfo {
+  width: 46%;
+  height: 500rpx;
+  border-radius: 20rpx;
+  margin: 8rpx 20rpx;
+  margin-right: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.allGoodbox .allGoodbox .goodInfo .goodImg {
+  width: 100%;
+  height: 320rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.allGoodbox .allGoodbox .goodInfo .goodName {
+  font-size: 28rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.allGoodbox .allGoodbox .goodInfo .goodIntroduce {
+  font-size: 26rpx;
+  width: 100%;
+  color: #555;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.allGoodbox .allGoodbox .goodInfo .goodPrice {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.allGoodbox .allGoodbox .goodInfo .goodPrice .goodNowPrice {
+  font-size: 34rpx;
+  color: #F00;
+}
+
+.allGoodbox .allGoodbox .goodInfo .goodPrice .goodOldPrice {
+  font-size: 26rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  text-decoration: line-through;
+  color: #555;
+}

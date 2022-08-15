@@ -1,0 +1,30 @@
+.banner {
+    width: 100vw;
+    height: 100vh;
+
+    swiper-item {
+        width: 100%;
+        height: 100%;
+
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.btn {
+    position: absolute;
+    width: 100%;
+    bottom: 80rpx;
+    z-index: 1;
+
+    button {
+        width: 200rpx;
+        height: 80rpx;
+        background-color: #F00;
+        color: #FFF;
+        font-size: 30rpx;
+        font-weight: 700;
+    }
+}

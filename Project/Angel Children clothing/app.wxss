@@ -1,0 +1,54 @@
+/**app.wxss**/
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "iconfont";
+    /* Project id 3424689 */
+    src: url('//at.alicdn.com/t/c/font_3424689_o8jvfd50ut.woff2?t=1660547170893') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3424689_o8jvfd50ut.woff?t=1660547170893') format('woff'),
+        url('//at.alicdn.com/t/c/font_3424689_o8jvfd50ut.ttf?t=1660547170893') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+    content: "\e600";
+}
+
+.icon-saoma:before {
+    content: "\e749";
+}
+
+.icon-gouwuche:before {
+    content: "\e70b";
+}
+
+.icon-shuangliebiao:before {
+    content: "\e6e5";
+}
+
+.icon-danliebiao:before {
+    content: "\e623";
+}
+
+.icon-erweima:before {
+    content: "\e642";
+}
+
+.icon-share:before {
+    content: "\e636";
+}
