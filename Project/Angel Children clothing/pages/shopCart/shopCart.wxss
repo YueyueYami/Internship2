@@ -1,7 +1,120 @@
-.customBtn {
-  width: 200rpx;
+page {
+  background-color: #EEE;
+}
+
+.van-swipe-cell__right {
+  display: inline-block;
+  width: 75px;
+  height: 67px;
+  font-size: 15px;
+  line-height: 67px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.van-swipe-cell__right view {
+  width: 75px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopCartScroll {
+  width: 100vw;
+}
+
+.shopCartScroll .shopCartbox {
+  width: 100%;
+  height: 100vh;
+}
+
+.shopCartScroll .shopCartbox .shopCartClass {
+  width: 100%;
   height: 80rpx;
-  background-color: red;
-  color: #FFF;
+  line-height: 80rpx;
+  color: #555;
   font-weight: 700;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+  background-color: #CCC;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods {
+  width: 100%;
+  height: calc(100vh - 80rpx);
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo {
+  margin-bottom: 20rpx;
+  background-color: #FFF;
+  border-radius: 20rpx;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo .goodInfoCont {
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo .goodInfoCont .goodImg {
+  height: 100%;
+  width: 220rpx;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo .goodInfoCont .goodName {
+  flex: 1;
+  height: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo .goodInfoCont .goodName .priceAndNum {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo .goodInfoCont .goodName .priceAndNum view:nth-child(1) {
+  color: red;
+  font-size: 36rpx;
+}
+
+.shopCartScroll .shopCartbox .totalPrice {
+  height: 100rpx;
+  width: 100%;
+  background-color: #FFF;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.shopCartScroll .shopCartbox .totalPrice .price {
+  color: red;
+  font-size: 40rpx;
+}
+
+.shopCartScroll .shopCartbox .totalPrice .goodOk button {
+  margin: 0;
+  width: 200rpx;
+  border-radius: 50rpx;
+  background-color: red;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
 }

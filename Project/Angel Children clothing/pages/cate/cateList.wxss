@@ -141,3 +141,83 @@
   font-size: 60rpx;
   color: red;
 }
+
+.popup {
+  position: relative;
+}
+
+.popup .goodSkuChange {
+  padding: 20rpx;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.popup .goodSkuChange .goodInfo {
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  background-color: #EEE;
+}
+
+.popup .goodSkuChange .goodInfo .goodImg {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.popup .goodSkuChange .goodInfo .goodName {
+  flex: 1;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+}
+
+.popup .goodSkuChange .goodInfo .goodName text:nth-child(1) {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.popup .goodSkuChange .goodInfo .goodName text:nth-child(2) {
+  font-size: 36rpx;
+  color: red;
+  font-weight: 900;
+}
+
+.popup .goodSkuChange .goodSku {
+  width: 100%;
+  height: 140rpx;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #CCC;
+}
+
+.popup .goodSkuChange .goodSku .skuParam {
+  display: flex;
+}
+
+.popup .goodSkuChange .goodSku .skuParam .skuparaChange {
+  margin-right: 20rpx;
+  border: 1px solid #CCC;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+}
+
+.popup .goodSkuChange .goodSku .skuParam .actives {
+  border: 1px solid red;
+}
+
+.popup .goodSkuChange .buyNum {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+
+.popup .goodSkuChange .btn {
+  background-color: red;
+  color: #FFF;
+  font-weight: 700;
+}

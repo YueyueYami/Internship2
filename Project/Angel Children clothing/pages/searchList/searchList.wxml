@@ -2,7 +2,7 @@
 <!-- 搜索框 -->
 <view class="search">
     <text class="iconfont icon-sousuo"></text>
-    <input type="text" placeholder="请输入搜索关键词" />
+    <input type="text" placeholder="请输入搜索关键词" value="{{value}}" />
     <text bindtap="switchListMode" class="iconfont {{goodListMode==true?'icon-danliebiao':'icon-shuangliebiao'}}"></text>
 </view>
 <!-- 排序方式tabs -->

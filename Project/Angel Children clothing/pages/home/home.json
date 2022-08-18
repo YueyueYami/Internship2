@@ -4,5 +4,6 @@
         "van-config-provider": "@vant/weapp/config-provider/index",
         "van-progress": "@vant/weapp/progress/index"
     },
-    "navigationStyle": "custom"
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
 }

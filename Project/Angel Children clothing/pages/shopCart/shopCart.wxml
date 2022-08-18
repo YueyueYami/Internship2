@@ -1,4 +1,35 @@
 <!--pages/shopCart/shopCart.wxml-->
-<van-empty class="custom-image" image="http://96.43.108.32:4500/i/2022/08/15/xspcsi.png" description="购物车空空如也">
-    <button class="customBtn">去逛逛</button>
+<van-empty class="empty" wx:if="{{emptyShow}}" class="custom-image" image="http://96.43.108.32:4500/i/2022/08/15/xspcsi.png" description="购物车空空如也">
+    <button bindtap="toGoodCate" class="customBtn">去逛逛</button>
 </van-empty>
+<scroll-view scroll-y="true" class="shopCartScroll" wx:else="{{emptyShow}}">
+    <view class="shopCartbox">
+        <view class="shopCartClass">其他</view>
+        <view class="shopCartGoods">
+            <view class="shopCartGoodInfo" wx:for="{{shopCartList}}" wx:key="key">
+                <van-swipe-cell right-width="{{ 75 }}">
+                    <van-cell-group>
+                        <view class="goodInfoCont">
+                            <van-checkbox value="{{ item.selected }}" checked-color="#07c160" bind:change="goodCk" data-key="{{item.key}}" data-selected="{{item.selected}}" />
+                            <image src="{{item.pic}}" class="goodImg"></image>
+                            <view class="goodName">
+                                <view class="name">{{item.name}}</view>
+                                <view class="priceAndNum">
+                                    <view>￥{{item.price}}</view>
+                                    <van-stepper min="0" value="{{ item.number }}" bind:plus="addGoodNum" bind:minus="subGoodNum" data-key="{{item.key}}" data-number="{{item.number}}" />
+                                </view>
+                            </view>
+                        </view>
+                    </van-cell-group>
+                    <view slot="right" catchtap="delGood" data-key="{{item.key}}">删除</view>
+                </van-swipe-cell>
+            </view>
+        </view>
+        <view class="totalPrice">
+            <view class="price">￥{{totalPrice}}</view>
+            <view class="goodOk">
+                <button>去结算</button>
+            </view>
+        </view>
+    </view>
+</scroll-view>

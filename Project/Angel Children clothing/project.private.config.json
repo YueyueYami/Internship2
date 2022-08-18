@@ -63,6 +63,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/shopCart/shopCart",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

@@ -1,4 +1,6 @@
 // pages/my/my.js
+const API = require('../../axios/api')
+const AUTH = require('../../utils/auth')
 Page({
 
     /**
@@ -43,7 +45,9 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow() {},
+    onShow() {
+        this.authRegAndLogin()
+    },
 
     /**
      * 生命周期函数--监听页面隐藏

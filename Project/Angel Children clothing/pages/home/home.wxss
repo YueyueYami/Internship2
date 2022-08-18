@@ -383,7 +383,6 @@ page {
 .kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodImg {
   width: 35%;
   height: 100%;
-  background-color: red;
 }
 
 .kanjiabox .kanjiaGoods .kanjiaGoodbox .kanjiaGoodInfo {

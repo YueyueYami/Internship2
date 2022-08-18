@@ -25,11 +25,35 @@
                     </view>
                     <view class="goodPrice">
                         <text>￥{{item.minPrice}}</text>
-                        <text wx:if="{{item.propertyIds}}" class="iconfont icon-share"></text>
-                        <text wx:else="{{false}}" class=" iconfont icon-gouwuche"></text>
+                        <text catchtap="addSkuGoodToShopCart" data-id="{{item.id}}" data-img="{{item.pic}}" wx:if="{{item.propertyIds}}" class="iconfont icon-tianjia"></text>
+                        <text catchtap="addGoodToShopCart" data-id="{{item.id}}" wx:else="{{false}}" class=" iconfont icon-gouwuche"></text>
                     </view>
                 </view>
             </view>
         </view>
     </scroll-view>
+</view>
+<view class="popup">
+    <van-popup closeable round show="{{ goodSkuBox }}" position="bottom" custom-style="height: auto;" bind:close="onClose">
+        <view class="goodSkuChange">
+            <view class="goodInfo">
+                <image src="{{goodInfo.pic}}" class="goodImg"></image>
+                <view class="goodName">
+                    <text>{{goodInfo.name}}</text>
+                    <text>￥{{goodInfo.minPrice}}</text>
+                </view>
+            </view>
+            <view class="goodSku" wx:for="{{skuList}}" wx:key="id">
+                <view class="skuName">{{item.name}}</view>
+                <view class="skuParam">
+                    <view bindtap="changeSku" data-id="{{ele.id}}" data-pid="{{ele.propertyId}}" wx:for="{{item.childsCurGoods}}" wx:key="id" wx:for-item="ele" class="skuparaChange {{ele.active==true?'actives':''}}">{{ele.name}}</view>
+                </view>
+            </view>
+            <view class="buyNum">
+                <view>购买数量</view>
+                <van-stepper value="{{buyNum}}" bind:change="onChange" />
+            </view>
+            <button class="btn" bindtap="addShopCart">添加到购物车</button>
+        </view>
+    </van-popup>
 </view>

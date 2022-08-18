@@ -3,11 +3,9 @@ const {
     getHomeBanner, //首页banner图
     getHomeCate, //首页的分类模块
     getNoticeBar, //首页资讯的接口
-    getMiaoshaGoods, //获取秒杀商品
-    getBaokuanGoods, //获取爆款商品
-    getKanjiaGoods, //获取砍价商品
-    getPintuanGoods, //获取拼团商品
+    getGoodsClass, //获取不同活动区块的商品
     getAllGood, //获取所有商品
+    getUserToken, //根据code获取token
 } = require('../../axios/api')
 // pages/home/home.js
 Page({
@@ -23,7 +21,9 @@ Page({
         baokuanGoods: [], //爆款商品
         kanjiaGoods: [], //砍价商品
         pintuanGoods: [], //拼团商品
-        allGood: [] //所有商品
+        allGood: [], //所有商品
+        page: 1, //加载商品页数
+        pageSize: 5 //每页加载5条
     },
     /**
      * 生命周期函数--监听页面加载
@@ -57,7 +57,13 @@ Page({
     onReady() {
 
     },
-
+    // 优化首页加载
+    youHua(data) {
+        if (data.code == -3) {
+            this.onPullDownRefresh()
+            return false
+        }
+    },
     /**
      * 生命周期函数--监听页面显示
      */
@@ -66,21 +72,26 @@ Page({
         const resCate = await getHomeCate() //获取首页分类图
         const resNotice = await getNoticeBar() //获取资讯栏提示
         //获取秒杀类商品
-        const miaoshaData = true //秒杀类商品传值
-        const resMiaosha = await getMiaoshaGoods(miaoshaData) //获取秒杀类商品数据
+        const miaoshaData = {
+            miaosha: true
+        } //秒杀类商品传值
+        const resMiaosha = await getGoodsClass(miaoshaData) //获取秒杀类商品数据
         //获取爆款类商品
-        const baokuanData = 1 //爆款类商品传值
-        const resBaokuan = await getBaokuanGoods(baokuanData) //获取爆款类商品数据
+        const baokuanData = {
+            recommendStatus: 1
+        } //爆款类商品传值
+        const resBaokuan = await getGoodsClass(baokuanData) //获取爆款类商品数据
         //获取砍价商品
-        const kanjiaData = true //砍价类商品传值
-        const resKanjia = await getKanjiaGoods(kanjiaData) //获取砍价类商品
+        const kanjiaData = {
+            kanjia: true
+        } //砍价类商品传值
+        const resKanjia = await getGoodsClass(kanjiaData) //获取砍价类商品
         //获取拼团商品
-        const pintuanData = true //拼团商品传值
-        const respintuan = await getPintuanGoods(pintuanData) //获取拼团商品
-        //获取所有商品
-        const resAllGood = await getAllGood()
-        //翻转数组
-        const allGoodArr = resAllGood.data.result.reverse()
+        const pintuanData = {
+            pingtuan: true
+        } //拼团商品传值
+        const respintuan = await getGoodsClass(pintuanData) //获取拼团商品
+        this.youHua(resMiaosha || resBaokuan || resKanjia || respintuan)
         //当前页面赋值
         this.setData({
             homeBannerList: resBanner.data,
@@ -89,11 +100,39 @@ Page({
             miaoshaGoods: resMiaosha.data.result,
             baokuanGoods: resBaokuan.data.result,
             kanjiaGoods: resKanjia.data.result,
-            pintuanGoods: respintuan.data.result,
-            allGood: allGoodArr
+            pintuanGoods: respintuan.data.result
+        })
+        this.getAllGood()
+        this.getUserToken()
+    },
+    async getAllGood() {
+        //根据页数和每页获取所有商品
+        const resAllGood = await getAllGood({
+            page: this.data.page,
+            pageSize: this.data.pageSize
+        })
+        if (resAllGood.code == 0) {
+            //翻转数组
+            const allGoodArr = resAllGood.data.result.reverse()
+            this.data.allGood = this.data.allGood.concat(allGoodArr)
+            this.setData({
+                allGood: this.data.allGood
+            })
+        } else {
+            wx.showToast({
+                title: '暂无更多商品',
+                icon: 'error'
+            })
+        }
+    },
+    getUserToken() { //进入页面获取token
+        wx.login({
+            success: async res => {
+                const resToken = await getUserToken(res.code)
+                wx.setStorageSync('token', resToken.data.token)
+            }
         })
     },
-
     /**
      * 生命周期函数--监听页面隐藏
      */
@@ -112,14 +151,14 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-
+        this.onShow()
     },
-
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-
+        this.data.page++
+        this.getAllGood()
     },
 
     /**

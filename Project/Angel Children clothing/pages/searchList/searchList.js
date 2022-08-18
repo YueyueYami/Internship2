@@ -89,13 +89,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     async onLoad(options) {
-        console.log(options);
         this.setData({
             value: options.value
         })
         if (options.value) {
             const resSearchGoods = await getSearchGoods(options)
-            console.log(resSearchGoods);
             if (resSearchGoods.code == 700) {
                 wx.showToast({
                     title: '暂无此数据，请换个关键词试试吧！！！',
