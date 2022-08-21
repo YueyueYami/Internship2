@@ -9,6 +9,9 @@ page {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 99;
 }
 
 .tabs view {
@@ -28,61 +31,69 @@ page {
   left: 70rpx;
 }
 
-.bannerbox {
+.scroll {
+  width: 100%;
+  height: calc(100vh - 50rpx - 55rpx - 20rpx);
+  margin-top: 100rpx;
+}
+
+#banner {
+  width: 100%;
+}
+
+#banner .bannerbox {
   position: relative;
 }
 
-.bannerbox .iconfont {
+#banner .bannerbox .iconfont {
   position: absolute;
   font-size: 60rpx;
   bottom: -40rpx;
   right: 20rpx;
 }
 
-.bannerbox .icon-share {
+#banner .bannerbox .icon-share {
   right: 100rpx;
 }
 
-.bannerbox .banner {
+#banner .bannerbox .banner {
   width: 100vw;
   height: 550rpx;
 }
 
-.bannerbox .banner .banner-item {
+#banner .bannerbox .banner .banner-item {
   position: relative;
 }
 
-.bannerbox .banner .banner-item .goodImg {
+#banner .bannerbox .banner .banner-item .goodImg {
   width: 100%;
   height: 100%;
 }
 
-.goodInfo {
+#banner .goodInfo {
   width: 100%;
   height: 300rpx;
   background-color: #FFF;
-  padding: 30rpx 20rpx;
-  margin-bottom: 20rpx;
-  padding-bottom: 5rpx;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10rpx;
+  box-sizing: border-box;
 }
 
-.goodInfo .goodPrice text:nth-child(1) {
+#banner .goodInfo .goodPrice text:nth-child(1) {
   font-size: 48rpx;
   color: red;
 }
 
-.goodInfo .goodPrice text:nth-child(2) {
+#banner .goodInfo .goodPrice text:nth-child(2) {
   font-size: 30rpx;
   text-decoration: line-through;
   color: #CCC;
   margin-left: 30rpx;
 }
 
-.goodInfo .goodName view:nth-child(1) {
+#banner .goodInfo .goodName view:nth-child(1) {
   font-size: 36rpx;
   font-weight: 500;
   overflow: hidden;
@@ -92,38 +103,31 @@ page {
   -webkit-line-clamp: 2;
 }
 
-.goodInfo .goodName view:nth-child(2) {
+#banner .goodInfo .goodName view:nth-child(2) {
   font-size: 30rpx;
   font-weight: 300;
 }
 
-.goodInfo .shareText {
+#banner .goodInfo .shareText {
   color: red;
   font-size: 26rpx;
 }
 
 .goodPicInfoTit {
   width: 100vw;
-  height: 80rpx;
   background-color: #FFF;
-  box-sizing: border-box;
-  padding-left: 50rpx;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .goodPicInfoTit .tit {
   margin: 0;
   width: 200rpx;
-  height: 30rpx;
-  line-height: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   border-left: 10rpx solid red;
   padding-left: 20rpx;
   box-sizing: border-box;
-}
-
-.goodPicInfoTit .richInfo {
-  width: 100vw;
 }
 
 .popup {

@@ -1,0 +1,21 @@
+/* pages/distribute/distribute.wxss */
+
+.button view {
+    width: 96%;
+    border: none;
+    border-radius: 50rpx;
+    margin: auto;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top: 15rpx;
+}
+
+.button view:nth-child(1) {
+    background-color: #07c160;
+}
+
+.button view:nth-child(2) {
+    background-color: #ff976a;
+}

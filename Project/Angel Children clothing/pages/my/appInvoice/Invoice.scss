@@ -1,0 +1,42 @@
+page {
+    background-color: #eee;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    .info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20rpx;
+        view:nth-child(2){
+            color: red;
+        }
+    }
+}
+
+.button {
+    width: 100%;
+
+    button {
+        width: 98%;
+        margin: 20rpx auto;
+        color: #fff;
+        background-color: #07c160;
+    }
+}
+.notes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20rpx;
+    view:nth-child(2){
+        color: #aaa;
+    }
+}

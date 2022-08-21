@@ -1,0 +1,24 @@
+<view class="content">
+    <view class="info">
+        <view>发票填写</view>
+        <view>读取微信开票记录</view>
+    </view>
+    <view class="input">
+        <van-field label="工厂账号" placeholder="api工厂注册的手机号" />
+        <van-field label="发票抬头" placeholder="公司名称" />
+        <van-field label="税号" placeholder="填写税号" />
+        <van-field label="发票内容" disabled value="服务费" />
+        <van-field label="发票金额" placeholder="申请开票金额" />
+        <van-field label="地址与电话" placeholder="发票栏目处填写的地址与电话" />
+        <van-field label="开户行与账号" placeholder="发票栏目处填写的开户行与账号" />
+        <van-field label="电子邮箱" placeholder="发票将通过邮件发送给你" />
+        <van-field label="备注" placeholder="如有特殊说明，请告诉我们" />
+    </view>
+</view>
+<view class="button">
+    <button bindtap="button">申请发票</button>
+</view>
+<view class="notes">
+    <view>申请开票记录</view>
+    <view bindtap="query"><text>查询</text><text class="iconfont icon-danse_gengduojiantou"></text></view>
+</view>

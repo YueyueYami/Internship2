@@ -1,37 +1,40 @@
 <!--pages/goodInfo/goodInfo.wxml-->
 <!-- 商品详情tab -->
-<view class="tabs">
-    <view class="active">商品简介</view>
-    <view>商品详情</view>
-    <view>商品评价</view>
+<view class="tabs" id="tabs">
+    <view class="{{index==tabsIndex?'active':''}}" wx:for="{{tabsJump}}" data-to="{{item.to}}" data-index="{{index}}" wx:key="index" bindtap="tabsJumpMod">{{item.name}}</view>
 </view>
-<!-- 商品banner -->
-<view class="bannerbox">
-    <swiper class="banner">
-        <swiper-item class="banner-item" wx:for="{{pics}}" wx:key="index">
-            <image mode="widthFix" src="{{item}}" class="goodImg"></image>
-        </swiper-item>
-    </swiper>
-    <text class="iconfont icon-share"></text>
-    <text class="iconfont icon-erweima"></text>
-</view>
-<!-- 商品价格详情 -->
-<view class="goodInfo">
-    <view class="goodPrice">
-        <text>￥{{goodInfo.minPrice}}</text>
-        <text>￥{{goodInfo.originalPrice}}</text>
+<scroll-view class="scroll" scroll-y="true" bindscroll="totheMode" scroll-with-animation="true" scroll-into-view="{{toMode}}">
+    <view id="banner">
+        <!-- 商品banner -->
+        <view class="bannerbox">
+            <swiper class="banner">
+                <swiper-item class="banner-item" wx:for="{{pics}}" wx:key="index">
+                    <image mode="widthFix" src="{{item}}" class="goodImg"></image>
+                </swiper-item>
+            </swiper>
+            <text class="iconfont icon-share"></text>
+            <text class="iconfont icon-erweima"></text>
+        </view>
+        <!-- 商品价格详情 -->
+        <view class="goodInfo">
+            <view class="goodPrice">
+                <text>￥{{goodInfo.minPrice}}</text>
+                <text>￥{{goodInfo.originalPrice}}</text>
+            </view>
+            <view class="goodName">
+                <view>{{goodInfo.name}}</view>
+                <view>{{goodInfo.characteristic}}</view>
+            </view>
+            <view class="shareText">分享有赏，好友下单后可得 5元 现金奖励</view>
+        </view>
     </view>
-    <view class="goodName">
-        <view>{{goodInfo.name}}</view>
-        <view>{{goodInfo.characteristic}}</view>
+    <!-- 商品富文本详情 -->
+    <view class="goodPicInfoTit" id="goodinfo">
+        <view class="tit">商品详情</view>
+        <rich-text class="richInfo" nodes="{{content}}"></rich-text>
     </view>
-    <view class="shareText">分享有赏，好友下单后可得 5元 现金奖励</view>
-</view>
-<!-- 商品富文本详情 -->
-<view class="goodPicInfoTit">
-    <view class="tit">商品详情</view>
-</view>
-<rich-text class="richInfo" nodes="{{content}}"></rich-text>
+
+</scroll-view>
 <!-- 商品导航组件 -->
 <van-goods-action>
     <van-goods-action-icon icon="chat-o" text="客服" />
@@ -48,7 +51,7 @@
                 <image src="{{goodInfo.pic}}" class="goodImg"></image>
                 <view class="goodName">
                     <text>{{goodInfo.name}}</text>
-                    <text>￥{{goodInfo.minPrice}}</text>
+                    <text>￥{{skuGoodPrice==0?goodInfo.minPrice:skuGoodPrice}}</text>
                 </view>
             </view>
             <view class="goodSku" wx:for="{{skuList}}" wx:key="id">

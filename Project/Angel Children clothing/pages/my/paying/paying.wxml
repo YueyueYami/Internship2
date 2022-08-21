@@ -1,0 +1,52 @@
+<view class="input">
+    <text>消费金额</text>
+    <input type="text" placeholder="询问服务员本次消费金额" />
+</view>
+<view class="paying-content">
+    <view class="paying-title">优惠规则</view>
+    <view class="paying-list">
+        <view>减 500 元</view>
+        <view>消费满10000元</view>
+    </view>
+    <view class="paying-list">
+        <view>减 300 元</view>
+        <view>消费满2000元</view>
+    </view>
+    <view class="paying-list">
+        <view>减 150 元</view>
+        <view>消费满1000元</view>
+    </view>
+    <view class="paying-list">
+        <view>减 60 元</view>
+        <view>消费满500元</view>
+    </view>
+    <view class="paying-list">
+        <view>减 22 元</view>
+        <view>消费满200元</view>
+    </view>
+    <view class="paying-list">
+        <view>减 10 元</view>
+        <view>消费满100元</view>
+    </view>
+</view>
+<view class="paying-way">
+    <view class="paying-way-content">付款方式</view>
+    <view class="paying-way-list">
+        <view>
+            <text>余额支付</text>
+            <text>0</text>
+        </view>
+        <view>
+            <van-checkbox value='{{flag}}' bind:change="onChange"></van-checkbox>
+        </view>
+    </view>
+    <view class="paying-way-list">
+        <view>在线支付</view>
+        <view>
+            <van-checkbox value='{{flags}}' bind:change="openChange"></van-checkbox>
+        </view> 
+    </view>
+</view>
+<view class="button">
+    <button bindtap="button">确认支付</button>
+</view>

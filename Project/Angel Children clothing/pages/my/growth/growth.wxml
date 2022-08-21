@@ -1,0 +1,9 @@
+<view class="header">
+    <view>
+        <view class="points">可用成长值</view>
+        <view class="number">10</view>
+    </view>
+</view>
+<view class="points-list">
+    <view>暂无成长值</view>
+</view>

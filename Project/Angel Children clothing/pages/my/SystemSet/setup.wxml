@@ -1,0 +1,7 @@
+<view class="userinfo">
+    <van-cell title="关于我们" is-link />
+    <van-cell title="视频客服" is-link />
+    <van-cell title="意见反馈" is-link />
+    <van-cell title="清除存缓" is-link />
+    <van-cell title="当前版本" value="12.13.0" />
+</view>

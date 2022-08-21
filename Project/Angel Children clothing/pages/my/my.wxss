@@ -1,1 +1,159 @@
-/* pages/my/my.wxss */
+.userInfo {
+  height: 240rpx;
+  width: 100%;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.userInfo image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+
+.userInfo .userName {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+}
+
+.userBalance {
+  width: 100%;
+  height: 120rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+}
+
+.userBalance view {
+  width: 25%;
+  height: 90%;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userBalance view:nth-child(2) {
+  border-left: 1rpx solid #DDD;
+  border-right: 1rpx solid #DDD;
+}
+
+.userBalance view:nth-child(3) {
+  border-right: 1rpx solid #DDD;
+}
+
+.userOrder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userOrder .allOrder {
+  height: 80rpx;
+  width: 100%;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDD;
+}
+
+.userOrder .classOrder {
+  display: flex;
+  border-bottom: 1px solid #DDD;
+}
+
+.userOrder .classOrder view {
+  width: 20%;
+  height: 160rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+.userOrder .classOrder view:nth-child(2) {
+  border-left: 1px solid #DDD;
+}
+
+.userOrder .classOrder view:nth-child(3) {
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+}
+
+.userOrder .classOrder view:nth-child(4) {
+  border-right: 1px solid #DDD;
+}
+
+.userOrder .CPSOrder,
+.userOrder .recOrder {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDD;
+}
+
+.comUsed {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #DDD;
+  color: #777;
+}
+
+.UsedClass {
+  width: 100%;
+  display: flex;
+  border-bottom: 1rpx solid #DDD;
+  flex-wrap: wrap;
+}
+
+.UsedClass view {
+  width: 24.4%;
+  height: 160rpx;
+  border: .1rpx solid #DDD;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.levelThree {
+  width: 100%;
+}
+
+.levelThree view:nth-child(1) {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #DDD;
+  color: #777;
+  font-size: 28rpx;
+}
+
+.levelThree view {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDD;
+}

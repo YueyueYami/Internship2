@@ -1,0 +1,66 @@
+<view class="body">
+    <view class="tabs">
+        <van-sidebar active-key="{{ activeKey }}">
+            <van-sidebar-item bindtap="change" data-index="{{index}}" wx:key="index" wx:for="{{topList}}" title="{{item.name}}" />
+        </van-sidebar>
+    </view>
+    <view class="rigth" wx:if="{{activeKey==0}}">
+        <view class="help-content">
+            <view class="help-list">
+                <view class="text">商品质量问题</view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="help-list">
+                <view class="text">超时未收到货</view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="help-list">
+                <view class="text">物流发错地址</view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+    <view class="rigth" wx:if="{{activeKey==1}}">
+        <view class="help-content">
+            <view class="help-list">
+                <view class="text">发什么快递</view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="help-list">
+                <view class="text">全场包邮</view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="help-list">
+                <view class="text">是否正品</view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+    <view class="rigth" wx:if="{{activeKey==2}}">
+        <view class="help-content">
+            <view class="help-list">
+                <view class="text">如何查询订单</view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+    <view class="rigth" wx:if="{{activeKey==3||activeKey==4||activeKey==5||activeKey==6||activeKey==8}}">
+        <van-empty description="暂无记录" />
+    </view>
+    <view class="rigth" wx:if="{{activeKey==7}}">
+        <view class="help-content">
+            <view class="help-list">
+                <view class="text">正品保证</view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="help-list">
+                <view class="text">买贵必赔</view>
+                <van-icon name="arrow" />
+            </view>
+            <view class="help-list">
+                <view class="text">全场包邮</view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+</view>

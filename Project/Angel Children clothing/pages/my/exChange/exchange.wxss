@@ -1,0 +1,20 @@
+/* pages/exchange/exchange.wxss */
+page{
+    background-color: #eee;
+}
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx;
+    background-color: #fff;
+    margin: 15rpx 0;
+}
+
+.input input {
+    width: 80%;
+}
+button{
+    background-color: red;
+    color: #fff;
+}

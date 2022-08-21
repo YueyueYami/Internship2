@@ -81,4 +81,8 @@ module.exports = {
     textShopisShow(data) {
         return request('shop/goods/fav/check', 'GET', data)
     },
+    //获取商品详情不同sku组合的价格
+    getGoodSkuPrice(data) {
+        return request('shop/goods/price', 'POST', data)
+    }
 }

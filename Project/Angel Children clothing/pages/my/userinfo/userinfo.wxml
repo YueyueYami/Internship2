@@ -1,0 +1,7 @@
+<view class="userinfo">
+    <van-cell title="绑定手机" value="17638347551" />
+    <van-cell title="收货地址" bindtap="address" is-link />
+    <van-cell title="交易密码" bindtap="password" value="设置密码" is-link />
+    <van-cell title="我的收藏" bindtap="enshrine" is-link />
+    <van-cell title="修改资料" bindtap="material" is-link />
+</view>

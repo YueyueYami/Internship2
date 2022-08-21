@@ -1,0 +1,14 @@
+/* pages/register/register.wxss */
+.finger {
+    text-align: center;
+    margin: 20rpx;
+}
+
+.finger .iconfont {
+    color: red;
+    font-size: 150rpx;
+}
+
+.van-calendar .van-calendar__header .van-calendar__header-title {
+    height: 0 !important;
+}

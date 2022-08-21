@@ -1,0 +1,164 @@
+// 用户详情
+.userInfo {
+    height: 240rpx;
+    width: 100%;
+    padding: 0 30rpx;
+    display: flex;
+    align-items: center;
+
+    image {
+        width: 180rpx;
+        height: 180rpx;
+        border-radius: 50%;
+    }
+
+    .userName {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50rpx;
+    }
+}
+
+// 用户资产
+.userBalance {
+    width: 100%;
+    height: 120rpx;
+    padding: 10rpx 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+
+    view {
+        width: 25%;
+        height: 90%;
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    view:nth-child(2) {
+        border-left: 1rpx solid #DDD;
+        border-right: 1rpx solid #DDD;
+    }
+
+    view:nth-child(3) {
+        border-right: 1rpx solid #DDD;
+    }
+}
+
+// 用户订单
+.userOrder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .allOrder {
+        height: 80rpx;
+        width: 100%;
+        padding: 0 40rpx;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #DDD;
+    }
+
+    .classOrder {
+        display: flex;
+        border-bottom: 1px solid #DDD;
+
+        view {
+            width: 20%;
+            height: 160rpx;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20rpx 0;
+            box-sizing: border-box;
+        }
+
+        view:nth-child(2) {
+            border-left: 1px solid #DDD;
+        }
+
+        view:nth-child(3) {
+            border-left: 1px solid #DDD;
+            border-right: 1px solid #DDD;
+        }
+
+        view:nth-child(4) {
+            border-right: 1px solid #DDD;
+        }
+    }
+
+    .CPSOrder,
+    .recOrder {
+        width: 100%;
+        height: 80rpx;
+        line-height: 80rpx;
+        padding: 0 30rpx;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #DDD;
+    }
+}
+
+// 常用功能
+.comUsed {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #DDD;
+    color: #777;
+}
+
+.UsedClass {
+    width: 100%;
+    display: flex;
+    border-bottom: 1rpx solid #DDD;
+    flex-wrap: wrap;
+
+    view {
+        width: 24.4%;
+        height: 160rpx;
+        border: .1rpx solid #DDD;
+        border-top: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+// 三级分销
+.levelThree {
+    width: 100%;
+
+    view:nth-child(1) {
+        height: 80rpx;
+        line-height: 80rpx;
+        padding-left: 30rpx;
+        box-sizing: border-box;
+        border-bottom: 1px solid #DDD;
+        color: #777;
+        font-size: 28rpx;
+    }
+
+    view {
+        height: 80rpx;
+        line-height: 80rpx;
+        padding: 0 30rpx;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #DDD;
+    }
+}

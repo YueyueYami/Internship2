@@ -1,0 +1,5 @@
+<view class="input">
+    <van-field label="体现金额" placeholder="请输入本次体现金额" />
+    <van-field label="交易密码" placeholder="请输入交易密码" />
+</view>
+<button bindtap="button">申请提现</button>

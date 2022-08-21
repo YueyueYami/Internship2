@@ -4,7 +4,7 @@ page {
 
 .van-swipe-cell__right {
   display: inline-block;
-  width: 75px;
+  width: 73px;
   height: 67px;
   font-size: 15px;
   line-height: 67px;
@@ -47,13 +47,14 @@ page {
   width: 100%;
   height: calc(100vh - 80rpx);
   padding: 20rpx;
-  box-sizing: border-box;
+  padding-bottom: 180rpx;
 }
 
 .shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo {
   margin-bottom: 20rpx;
   background-color: #FFF;
   border-radius: 20rpx;
+  width: 95%;
 }
 
 .shopCartScroll .shopCartbox .shopCartGoods .shopCartGoodInfo .goodInfoCont {

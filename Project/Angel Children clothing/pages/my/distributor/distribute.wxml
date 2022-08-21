@@ -1,0 +1,7 @@
+<view class="empty">
+    <van-empty description="诚邀您成为分销商" />
+</view>
+<view class="button">
+    <view bindtap="audit">免费申请等待管理员审核</view>
+    <view bindtap="pay">直接支付3元，立即免审开通</view>
+</view>

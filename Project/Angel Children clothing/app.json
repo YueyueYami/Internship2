@@ -8,7 +8,24 @@
         "pages/goodInfo/goodInfo",
         "pages/discount/discount",
         "pages/shopCart/shopCart",
-        "pages/my/my"
+        "pages/my/my",
+        "pages/my/capital/capital",
+        "pages/my/capital/advance/advance",
+        "pages/my/capital/recharge/recharge",
+        "pages/my/capital/security/security",
+        "pages/my/growth/growth",
+        "pages/my/order/order",
+        "pages/my/CPSorder/CPSorder",
+        "pages/my/recall/recall",
+        "pages/my/paying/paying",
+        "pages/my/billing/billing",
+        "pages/my/appInvoice/Invoice",
+        "pages/my/register/register",
+        "pages/my/distributor/distribute",
+        "pages/my/exChange/exchange",
+        "pages/my/helpCenter/help",
+        "pages/my/userinfo/userinfo",
+        "pages/my/SystemSet/setup"
     ],
     "tabBar": {
         "list": [
@@ -40,5 +57,10 @@
         "navigationBarTitleText": "Weixin",
         "navigationBarTextStyle": "black"
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-field": "@vant/weapp/field/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index"
+    }
 }

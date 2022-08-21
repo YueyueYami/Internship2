@@ -5,7 +5,8 @@ const {
     getShopCart,
     addUrlencoded,
     deleteShopUrlencoded,
-    textShopisShow
+    textShopisShow,
+    getGoodSkuPrice
 } = require('../../axios/api')
 Page({
 
@@ -20,8 +21,55 @@ Page({
         buyShow: false, //购买时弹出层
         buyNum: 1,
         skuData: [],
-        shopCartNum: 0, //购物车数量
-        isCollect: true
+        shopCartNum: 0, //购物车商品数量
+        isCollect: true,
+        skuGoodPrice: 0,
+        skuCombination: [], //不同sku组合获取价格
+        toMode: 'banner',
+        tabsIndex: 0,
+        tabsJump: [{
+            name: '商品简介',
+            to: 'banner',
+            toHeight: 0
+        }, {
+            name: '商品详情',
+            to: 'goodinfo',
+            toHeight: 0
+        }, {
+            name: '商品评价',
+            to: 'evaluate',
+            toHeight: 0
+        }],
+        tabsheight: 0,
+        bannertop: 0,
+        bannerheight: 0
+    },
+    //点击跳转到对应的模块
+    tabsJumpMod(e) {
+        this.setData({
+            toMode: e.currentTarget.dataset.to,
+            tabsIndex: e.currentTarget.dataset.index
+        })
+    },
+    totheMode(e) {
+        let _this = this
+        let query = wx.createSelectorQuery()
+        query.select('#banner').boundingClientRect((a) => {
+            let conHeight = a.height
+            this.data.tabsJump[0].toHeight = a.top
+            if (conHeight + this.data.tabsJump[0].toHeight < 55) {
+                _this.setData({
+                    tabsIndex: 1
+                })
+            } else if (conHeight + this.data.tabsJump[0].toHeight > 55) {
+                _this.setData({
+                    tabsIndex: 0
+                })
+            }
+            _this.setData({
+                tabsJump: _this.data.tabsJump
+            })
+        }).exec()
     },
     buyShowTago() {
         this.setData({
@@ -55,10 +103,11 @@ Page({
         }
     },
     //选择sku标签
-    changeSku(e) {
+    async changeSku(e) {
         const id = e.currentTarget.dataset.id
         const pid = e.currentTarget.dataset.pid
         let newSkuArr = this.data.skuList.find(item => item.id == pid)
+        // 循环拿到sku
         newSkuArr.childsCurGoods.forEach(item => {
             if (item.id == id) {
                 item.active = true
@@ -71,12 +120,55 @@ Page({
             optionValueId: id,
         }
         this.data.skuData.push(skudata)
+        //根据sku参数获取对应价格
+        const skuCombData = {
+            pid: pid,
+            id: id
+        }
+        let flag = false
+        this.data.skuCombination.forEach((item, index) => {
+            if (item.pid == pid) {
+                this.data.skuCombination[index].id = id
+                flag = true
+            }
+        })
+        if (flag == false) {
+            this.data.skuCombination.push(skuCombData)
+            console.log(this.data.skuCombination);
+        }
+        //data赋值
         this.setData({
             skuList: this.data.skuList,
-            skuData: this.data.skuData
+            skuData: this.data.skuData,
+            skuCombination: this.data.skuCombination
         })
+        if (this.data.skuCombination.length == this.data.skuList.length) {
+            const arr = []
+            this.data.skuCombination.forEach(item => {
+                let str = `${item.pid}:${item.id}`
+                arr.push(str)
+            })
+            const data = {
+                goodsId: this.data.id,
+                propertyChildIds: arr.join(','),
+                token: wx.getStorageSync('token')
+            }
+            console.log(data);
+            const resSkuGoodPrice = await getGoodSkuPrice(data)
+            console.log(resSkuGoodPrice);
+            if (resSkuGoodPrice.code == 0) {
+                this.setData({
+                    skuGoodPrice: resSkuGoodPrice.data.price
+                })
+            } else if (resSkuGoodPrice.code == 404) {
+                wx.showToast({
+                    title: '当前配置已售罄',
+                })
+            }
+        }
+
     },
-    // 点击添加按钮后跳转到购物车
+    // 点击添加按钮后添加到购物车
     async addShopCart() {
         const res = await addToShopCart({
             sku: JSON.stringify(this.data.skuData),
@@ -94,7 +186,8 @@ Page({
             buyShow: false,
             buyNum: 1,
             skuData: [],
-            skuList: this.data.skuList
+            skuList: this.data.skuList,
+            skuGoodPrice: 0
         })
         const resShopCart = await getShopCart({
             token: wx.getStorageSync('token')
@@ -111,13 +204,12 @@ Page({
         } else if (res.code != 0) {
             return false
         }
+        this.getShopCartList()
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady() {
-
-    },
+    onReady() {},
     //收藏
     async collect() {
         if (this.data.isCollect == true) {
@@ -172,16 +264,32 @@ Page({
             }
         }
     },
+    //获取购物车商品数量
+    async getShopCartList() {
+        const res = await getShopCart({
+            token: wx.getStorageSync('token')
+        })
+        wx.setStorageSync('shopCartNumber', res.data.number)
+        this.setData({
+            shopCartNum: res.data.number
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     async onShow() {
+        this.getShopCartList()
         const res = await getGoodInfo(this.data.id)
-        const resShopCart = await getShopCart({
-            token: wx.getStorageSync('token')
-        })
-        console.log(resShopCart.data);
-        const num = resShopCart.data.number
+        //如果有商品sku参数，就赋值给数组，如果没有数组置空
+        if (res.data.properties) {
+            this.setData({
+                skuList: res.data.properties,
+            })
+        } else {
+            this.setData({
+                skuList: [],
+            })
+        }
         //检测是否已收藏
         const resShoucang = await textShopisShow({
             goodsId: this.data.id,
@@ -197,13 +305,11 @@ Page({
                 isCollect: true
             })
         }
-        console.log(resShoucang);
         this.setData({
             id: this.data.id,
             pics: res.data.pics2,
-            shopCartNum: num,
             goodInfo: res.data.basicInfo,
-            skuList: res.data.properties,
+
             content: res.data.content.replace(/\<img/gi, '<img style="max-width:100%;height:auto"'),
         })
 

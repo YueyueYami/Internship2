@@ -1,0 +1,27 @@
+.header {
+  height: 300rpx;
+  background-color: #e85654;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header view {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.header view .number {
+  margin-top: 10rpx;
+}
+
+.points-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 2rpx solid #aaa;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+}

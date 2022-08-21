@@ -1,0 +1,25 @@
+<view class="header">
+    <view>
+        <view class="origin">可用余额(元)</view>
+        <view class="number">0.00</view>
+    </view>
+    <view>
+        <view class="origin">冻结金额(元)</view>
+        <view class="number">0.00</view>
+    </view>
+    <view>
+        <view class="origin">累计消费(元)</view>
+        <view class="number">0.00</view>
+    </view>
+    <view class="button">
+        <view bindtap="advance">提现</view>
+        <view bindtap="security">押金</view>
+        <view bindtap="recharge">充值</view>
+    </view>
+</view>
+<view class="tabs">
+    <view catchtap="tabs" wx:for="{{indexData}}" wx:key="index" data-index="{{index}}" class="{{index == detailIndex ? 'bright' : ''}}">{{item.text}}</view>
+</view>
+<view class="empty">
+    <van-empty description="暂无资金明细" />
+</view>

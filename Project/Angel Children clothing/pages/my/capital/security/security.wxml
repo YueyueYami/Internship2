@@ -1,0 +1,4 @@
+<view class="input">
+    <van-field label="押金金额" placeholder="请输入押金金额" />
+</view>
+<button style="color: #fff; background-color: red;" bindtap="button">立即支付</button>

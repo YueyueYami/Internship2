@@ -1,0 +1,6 @@
+<view class="tabs">
+    <view catchtap="tabs" wx:for="{{IndexData}}" wx:key="index" data-index="{{index}}" class="{{index == detailIndex ? 'bright' : ''}}">{{item.text}}</view>
+</view>
+<view>
+    <van-empty description="暂无订单" />
+</view>

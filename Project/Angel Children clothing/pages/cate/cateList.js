@@ -179,7 +179,25 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
+    //获取购物车商品数量
+    async getShopCartNum() {
+        const res = await getShopCart({
+            token: wx.getStorageSync('token')
+        })
+        if (res.code != 0) {
+            wx.removeTabBarBadge({
+                index: 3,
+            })
+            return false
+        } else {
+            wx.setTabBarBadge({
+                index: 3,
+                text: res.data.number.toString(),
+            })
+        }
+    },
     async onShow() {
+        this.getShopCartNum()
         const resCateList = await getHomeCate()
         const resAllGood = await getAllGood()
         const arr = resAllGood.data.result.filter(item => {

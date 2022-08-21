@@ -1,0 +1,25 @@
+.sum {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .sum-content {
+        width: 200rpx;
+        height: 200rpx;
+        border: 1rpx solid #aaa;
+        margin-left: 35rpx;
+        margin-top: 20rpx;
+        text-align: center;
+        padding-top: 50rpx;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+button{
+    background-color: #07c160;
+    color: #fff;
+    border-radius: 50rpx;
+    margin-top: 20rpx;
+}

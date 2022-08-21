@@ -1,4 +1,99 @@
 <!--pages/my/my.wxml-->
-<van-empty class="custom-image" image="http://96.43.108.32:4500/i/2022/08/15/xspcsi.png" description="微信申请获取权限">
+<van-empty wx:if="{{loginFlag==0}}" class="custom-image" image="http://96.43.108.32:4500/i/2022/08/15/xspcsi.png" description="微信申请获取权限">
     <button bindtap="login">微信一键登录</button>
 </van-empty>
+<scroll-view wx:else>
+    <view>
+        <!-- 用户头像 -->
+        <view class="userInfo">
+            <image src="{{userInfo.avatarUrl}}"></image>
+            <view class="userName">
+                <text>用户ID：3914816</text>
+                <text>{{userInfo.nickName}}</text>
+            </view>
+        </view>
+        <!-- 用户资产 -->
+        <view class="userBalance">
+            <view bindtap="toUserCapital">
+                <text>0.00</text>
+                <text>余额</text>
+            </view>
+            <view bindtap="toUserCapital">
+                <text>0.00</text>
+                <text>冻结</text>
+            </view>
+            <view>
+                <text>0</text>
+                <text>积分</text>
+            </view>
+            <view bindtap="toUserGrowUp">
+                <text>0</text>
+                <text>成长值</text>
+            </view>
+        </view>
+        <!-- 用户订单 -->
+        <view class="userOrder">
+            <view class="allOrder" bindtap="toUserOrderList" data-index='0'>
+                <text>我的订单</text>
+                <text>更多 ></text>
+            </view>
+            <view class="classOrder">
+                <view bindtap="toUserOrderList" data-index='1'>待付款</view>
+                <view bindtap="toUserOrderList" data-index='2'>待发货</view>
+                <view bindtap="toUserOrderList" data-index='3'>待收货</view>
+                <view bindtap="toUserOrderList" data-index='4'>待评价</view>
+                <view bindtap="toUserOrderList" data-index='5'>售后</view>
+            </view>
+            <view class="CPSOrder" bindtap="toUserCPSOrder">
+                <text>CPS订单</text>
+                <text>管理 ></text>
+            </view>
+            <view class="recOrder" bindtap="toUserRecOrder">
+                <text>回收订单</text>
+                <text>管理 ></text>
+            </view>
+        </view>
+        <!-- 常用功能 -->
+        <view class="comUsed">常用功能</view>
+        <view class="UsedClass">
+            <view bindtap="toPay">优惠买单</view>
+            <view bindtap="toUserCapital">资金明细</view>
+            <view bindtap="toAppBill">申请发票</view>
+            <view bindtap="toBill">开票记录</view>
+            <view bindtap="toDiscount">优惠券</view>
+            <view bindtap="toRegister">签到赚积分</view>
+        </view>
+        <!-- 三级分销商 -->
+        <view class="levelThree">
+            <view>三级分销</view>
+            <view bindtap="toDistributor">
+                <text>成为分销商</text>
+                <text> > </text>
+            </view>
+        </view>
+        <!-- 其他功能 -->
+        <view class="levelThree">
+            <view>其他功能</view>
+            <view bindtap="toExChange">
+                <text>积分券兑换积分</text>
+                <text> > </text>
+            </view>
+            <view bindtap="toUserGrowUp">
+                <text>积分兑换成长值</text>
+                <text> > </text>
+            </view>
+            <view bindtap="toHelpCenter">
+                <text>帮助中心</text>
+                <text> > </text>
+            </view>
+            <view bindtap="toUserInfo">
+                <text>个人信息</text>
+                <text> > </text>
+            </view>
+            <view bindtap="toSystemSet">
+                <text>系统设置</text>
+                <text> > </text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

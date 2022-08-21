@@ -1,0 +1,22 @@
+<view class="input">
+    <van-field required label="用户名" placeholder="请输入用户名" />
+</view>
+<view class="sum">
+    <view class="sum-content">
+        <view class="icon"><text class="iconfont icon-jineqiandaiyueshangjin"></text></view>
+        <view class="number">￥1010</view>
+    </view>
+    <view class="sum-content">
+        <view class="icon"><text class="iconfont icon-jineqiandaiyueshangjin"></text></view>
+        <view class="number">￥1010</view>
+    </view>
+    <view class="sum-content">
+        <view class="icon"><text class="iconfont icon-jineqiandaiyueshangjin"></text></view>
+        <view class="number">￥1010</view>
+    </view>
+    <view class="sum-content">
+        <view class="icon"><text class="iconfont icon-jineqiandaiyueshangjin"></text></view>
+        <view class="number">￥1010</view>
+    </view>
+</view>
+<button bindtap="button">立即充值</button>

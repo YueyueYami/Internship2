@@ -1,2 +1,15 @@
 <!--pages/discount/discount.wxml-->
-<text>优惠卷</text>
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="可领">
+        <van-empty description="暂无优惠券" />
+    </van-tab>
+    <van-tab title="已领">
+        <van-empty description="暂无优惠券" />
+    </van-tab>
+    <van-tab title="失效">
+        <van-empty description="暂无优惠券" />
+    </van-tab>
+    <van-tab title="口令">
+    
+    </van-tab>
+</van-tabs>

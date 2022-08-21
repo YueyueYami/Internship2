@@ -1,0 +1,6 @@
+<view class="register-data">
+    <van-calendar title="" poppable="{{ false }}" show-confirm="{{ false }}" class="calendar" min-date="{{ minDate }}" max-date="{{ maxDate }}" />
+</view>
+<view class="finger" bindtap="finger">
+    <view>点击签到</view>
+</view>
