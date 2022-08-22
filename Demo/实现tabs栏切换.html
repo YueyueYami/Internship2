@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul {
+        display: flex;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .tabs {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        background-color: #fff;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        background-color: #F00;
+    }
+
+    .active {
+        background-color: aqua;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <ul>
+        <li class="tabs active">首页</li>
+        <li class="tabs">新闻</li>
+        <li class="tabs">娱乐</li>
+        <li class="tabs">影视</li>
+        <li class="tabs">我的</li>
+    </ul>
+</body>
+<script>
+    const tabs = document.querySelectorAll('.tabs')
+    tabs.forEach(item => {
+        item.addEventListener('click', function() {
+            tabs.forEach(item => {
+                item.classList.remove('active')
+            })
+            item.classList.add('active')
+        })
+    })
+</script>
+
+</html>

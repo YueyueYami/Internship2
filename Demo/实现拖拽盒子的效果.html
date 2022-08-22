@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-color: rgb(190, 244, 136);
+        color: #F00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .box {
+        position: absolute;
+        top: 200px;
+        left: 300px;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    var box = document.querySelector('.box')
+    var container = document.querySelector('.container')
+    // 监听方法不起作用
+    // box.addEventListener('mousedown', function(e) {
+    //     const disX = e.clientX - box.offsetLeft
+    //     const disY = e.clientY - box.offsetTop
+    //     container.addEventListener('mousemove', function(e) {
+    //         box.style.left = e.clientX - disX + 'px'
+    //         box.style.top = e.clientY - disY + 'px'
+    //     })
+    // })
+    // box.addEventListener('mouseup', function() {
+    //     console.log(1);
+    //     container.removeEventListener('mousemove', null)
+    // })
+    box.onmousedown = function(e) {
+        const disX = e.clientX - box.offsetLeft
+        const disY = e.clientY - box.offsetTop
+        container.onmousemove = function(e) {
+            box.style.left = e.clientX - disX + 'px'
+            box.style.top = e.clientY - disY + 'px'
+        }
+    }
+    box.onmouseup = () => {
+        container.onmousemove = null
+    }
+</script>
+
+</html>
