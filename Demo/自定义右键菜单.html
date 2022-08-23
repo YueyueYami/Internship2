@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .levelOne {
+            width: 200px;
+            list-style-type: none;
+            display: none;
+            position: relative;
+        }
+
+        .levelOne li {
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="levelOne">
+        <li>JavaScript学习</li>
+        <li>第一课</li>
+        <li>第二课</li>
+        <li>第三课</li>
+    </ul>
+</body>
+<script>
+    const dom = window.document
+    const levelOne = document.querySelector('.levelOne')
+    dom.oncontextmenu = function(e) {
+        levelOne.style.display = 'block'
+        levelOne.style.left = e.x + 'px'
+        levelOne.style.top = e.y + 'px'
+        return false
+    }
+    dom.addEventListener('click', () => {
+        console.log(1);
+        levelOne.style.display = 'none'
+    })
+</script>
+
+</html>

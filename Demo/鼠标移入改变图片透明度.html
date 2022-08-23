@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        list-style-type: none;
+    }
+
+    ul {
+        width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    li {
+        width: 30%;
+    }
+
+    li>img {
+        width: 100%;
+        opacity: 0.4;
+    }
+
+    .opacity {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>
+            <img src="./img/灰キさん-97171551_p0.png" alt="">
+        </li>
+        <li>
+            <img src="./img/灰キさん-97171551_p0.png" alt="">
+        </li>
+        <li>
+            <img src="./img/灰キさん-97171551_p0.png" alt="">
+        </li>
+        <li>
+            <img src="./img/灰キさん-97171551_p0.png" alt="">
+        </li>
+        <li>
+            <img src="./img/灰キさん-97171551_p0.png" alt="">
+        </li>
+        <li>
+            <img src="./img/灰キさん-97171551_p0.png" alt="">
+        </li>
+    </ul>
+</body>
+<script>
+    const lis = document.querySelectorAll('img')
+    console.log(lis);
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = () => {
+            lis[i].style.opacity = 1
+        }
+        lis[i].onmouseout = () => {
+            lis[i].style.opacity = .4
+        }
+    }
+</script>
+
+</html>

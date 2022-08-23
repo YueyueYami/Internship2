@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #CCC;
+            position: relative;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: absolute;
+            top: 200px;
+            left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    const doc = window.document
+    const box = document.querySelector('.box')
+    doc.addEventListener('keydown', (e) => {
+        //左
+        if (e.keyCode == 37) {
+            box.style.left = box.offsetLeft - 5 + 'px'
+        }
+        //右
+        if (e.keyCode == 39) {
+            box.style.left = box.offsetLeft + 5 + 'px'
+        }
+        //上38
+        if (e.keyCode == 38) {
+            box.style.top = box.offsetTop - 5 + 'px'
+        }
+        //下40
+        if (e.keyCode == 40) {
+            box.style.top = box.offsetTop + 5 + 'px'
+        }
+        if (17 == e.keyCode && e.keyCode == 38) {
+            console.log(1);
+        }
+    })
+</script>
+
+</html>

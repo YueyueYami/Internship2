@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #CCC;
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    const doc = window.document;
+    console.log(document);
+    doc.addEventListener('click', (e) => {
+        console.log(e.clientX, e.clientY);
+        alert(e.clientX + ',' + e.clientY);
+    })
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span>现在是</span>
+        <span class="hour"></span>:
+        <span class="min"></span>:
+        <span class="sec"></span>
+    </div>
+</body>
+<script>
+    const hourbox = document.querySelector('.hour')
+    const minbox = document.querySelector('.min')
+    const secbox = document.querySelector('.sec')
+    const timer = setInterval(() => {
+        const data = new Date()
+        const hour = data.getHours()
+        const min = data.getMinutes()
+        const sec = data.getSeconds()
+        hourbox.innerHTML = hour
+        minbox.innerHTML = min
+        secbox.innerHTML = sec
+    }, 1000)
+</script>
+
+</html>
